@@ -6,8 +6,7 @@ const nextSettings = {
     env: {
         title: 'Bluestone',
         titleDescription: 'Bluestone buyers agents',
-    },
-    target: serverless
+    }
 };
 
 module.exports = withPlugins([withImages(), nextSettings]);
