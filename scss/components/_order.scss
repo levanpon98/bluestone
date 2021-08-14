@@ -1,0 +1,185 @@
+.quote-detail {
+    .quote-detail__left {
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .quote-history {
+            margin-bottom: 30px;
+            .title {
+                margin-bottom: 20px; 
+            }
+            .quote-history__wrapper {
+                .quote-history__item {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px 10px;
+                    border: 1px solid #d9d9d9;
+                    margin-bottom: 10px;
+                    border-radius: 20px;
+                    .quote-history__title {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+    
+                    .quote-history__time {
+                        font-size: 16px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .file-upload {
+            .title {
+                margin-bottom: 20px; 
+            }
+        }
+    }
+
+    .ant-form-item-label {
+        label{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    .quote-detail__right {
+        // margin-left: 20px;
+        .title{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .item-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .list-quote__wrapper {
+            .list-quote__item {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 0 5px;
+                border-bottom: 1px solid #d9d9d9;
+                margin-bottom: 10px;
+                // border-radius: 20px;
+                .item-title {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+
+                .item-value {
+                    font-size: 16px;
+                    font-weight: 400;
+                    max-width: 300px;
+                }
+            }
+            .list-quote__item:last-child{
+                border-bottom: none
+            }
+
+            .quote-result {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                .quote-result_title {
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+                .quote-result_price {
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+            }
+
+            .button {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.ant-upload-list-picture  {
+    .ant-upload-list-item {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    } 
+}
+
+.ant-tag {
+    font-size: 16px;
+}
+
+.timeline__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .timeline__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        position: relative;
+        .cirle {
+            width: 75px;
+            height: 75px;
+            border: 2px solid #d9d9d9;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                display: flex;
+                font-size: 32px;
+                align-items: center;
+            }
+        }
+        .bar{
+            width: 100px;
+            height: 3px;
+            position: absolute;
+            left: -100px;
+            background-color: #f2f2f2;
+        }
+        .cirle:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.deposit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .bank-account {
+        padding: 20px 0px;
+        width: 400px;
+        height: 200px;
+        border: 2px solid #d9d9d9;
+        border-radius: 50px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        
+        h3{
+            text-align: center;
+        }
+
+        .account-info {
+            display: flex;
+            font-size: 16px;
+            text-transform: uppercase;
+            justify-content: flex-start;
+            text-align: start;
+            padding-left: 20px;
+        }
+    }
+    .upload{
+        padding-top: 20px;
+        width: 100%;
+        .ant-upload {
+            &.ant-upload-drag{
+                border-radius: 30px;
+            }
+        }
+    }
+}
