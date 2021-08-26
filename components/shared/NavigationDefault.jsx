@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import { notification } from 'antd';
 
 class NavigationDefault extends Component {
@@ -20,21 +20,21 @@ class NavigationDefault extends Component {
         return (
             <ul className="menu">
                 <li>
-                    <Link href="#">
+                    <Link to="home" spy={true} smooth={true} duration={500} offset={-100}>
                         <a >
                             Home
                         </a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#">
+                    <Link to="services" spy={true} smooth={true} duration={500} offset={-100}>
                         <a >
                             Services
                         </a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="#">
+                    <Link to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
                         <a >
                             About Us
                         </a>

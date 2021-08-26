@@ -17,9 +17,17 @@ const BecomeAVendorPage = () => {
         <ContainerPage title="Home Page" boxed={true}>
             <div className="ps-page--single">
                 {/* <VendorBanner /> */}
-                <HomeBanner/>
-                <Services />
-                <About />
+                <div id="home">
+                    <HomeBanner />
+                </div>
+                <div id="services">
+                    <Services />
+                </div>
+
+                <div id="about-us">
+                    <About />
+                </div>
+
                 {/* <VendorMileStone />
                 <VendorBestFees />
                 <VendorTestimonials />
@@ -32,5 +40,5 @@ const BecomeAVendorPage = () => {
     );
 };
 
-  
+
 export default BecomeAVendorPage;

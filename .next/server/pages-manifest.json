@@ -1,14 +1,6 @@
 {
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
-  "/admin": "pages/admin.js",
-  "/admin/login": "pages/admin/login.html",
-  "/admin/services": "pages/admin/services.js",
-  "/api/auth/login": "pages/api/auth/login.js",
-  "/api/contact": "pages/api/contact.js",
-  "/api/mail": "pages/api/mail.js",
-  "/api/services": "pages/api/services.js",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }
