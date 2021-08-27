@@ -10,7 +10,7 @@
         .ps-container, .container {
             display: flex;
             flex-flow: row nowrap;
-
+            
             > * {
                 width: 100%;
             }
@@ -62,6 +62,32 @@
                     color: #000;
                     font-size: 20px;
                     margin-left: 10px;
+                }
+            }
+        }
+
+        @include media('<md') {
+            .ps-container {
+                display: flex;
+                flex-direction: column;
+                .header__left {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                .header__center {
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    ul {
+                        padding: 0;
+                        li > a {
+                            padding: 15px 5px !important;
+                        }
+                    }
+                }
+                .header__right {
+                    width: 100%;
+                    max-width: 1000px;
+                    justify-content: center;
                 }
             }
         }

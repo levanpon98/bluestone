@@ -1399,7 +1399,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px 0;
+        padding: 20px;
     }
 }
 .ps-vendor-milestone {
@@ -2680,15 +2680,15 @@ div[class*='Timeline-wrapper-'] {
     h2 {
         font-size: 100px;
         text-transform: uppercase;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
         // ;
         @include media('<lg') {
             font-size: 100px;
-            margin-bottom: 200px;
+            margin-bottom: 100px;
         }
         @include media('<md') {
             font-size: 75px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
         }
         @include media('<sm') {
             font-size: 40px;
@@ -2704,5 +2704,10 @@ div[class*='Timeline-wrapper-'] {
         background-color: #f9903f;
         padding: 15px 50px;
         font-weight: 600;
+
+        @include media('<xs') { 
+            padding: 15px 30px;
+            font-size: 20px;
+        }
     }
 }

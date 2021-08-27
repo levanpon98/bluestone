@@ -17,6 +17,7 @@ const VendorAbout = () => (
                         <div className="ps-block--icon-box-2">
                             <div className="ps-block__thumbnail">
                                 {/* <img src="/static/img/icons/vendor-1.png" alt="hmsp" /> */}
+                                <i className="icon-home5 icon"></i>
                             </div>
                             <div className="ps-block__content">
                                 <h4>PROPERTY BUYER’S AGENT</h4>
@@ -39,7 +40,7 @@ const VendorAbout = () => (
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 card-item">
                         <div className="ps-block--icon-box-2">
                             <div className="ps-block__thumbnail">
-                                {/* <img src="/static/img/icons/vendor-1.png" alt="hmsp" /> */}
+                                <i className="icon-balance icon"></i>
                             </div>
                             <div className="ps-block__content">
                                 <h4>VENDOR ADVOCACY</h4>
@@ -62,8 +63,7 @@ const VendorAbout = () => (
                     <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 card-item">
                         <div className="ps-block--icon-box-2">
                             <div className="ps-block__thumbnail">
-                                {/* <img src="/static/img/icons/vendor-1.png" alt="hmsp" /> */}
-
+                                <i className="icon-trophy icon"></i>
                             </div>
                             <div className="ps-block__content">
                                 <h4>PROPERTY MANAGEMENT</h4>
