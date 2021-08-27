@@ -5,7 +5,7 @@ const VendorAbout = () => (
         className="ps-vendor-banner bg--cover"
         style={{ backgroundImage: "url('/static/img/bg/71d0bfbcda5f2d01744e.jpg')" }}
     >
-        <div className="container">
+        <div className="ps-container">
             <div className="ps-section__header">
                 <h4>
                     Our Services

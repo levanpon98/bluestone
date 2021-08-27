@@ -171,6 +171,7 @@
                 color: $color-1st;
             }
         }
+
         &:first-child {
             padding-left: 0;
             >a {
@@ -262,6 +263,19 @@
                 }
             }
         }
+        @include media('<md') {
+
+            >a {
+                padding: 15px 20px;
+                font-size: 20px;
+            }
+         }
+         @include media('<xs') {
+            >a {
+                padding: 15px 20px;
+                font-size: 16px;
+            }
+         }
     }
 }
 

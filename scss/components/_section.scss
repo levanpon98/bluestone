@@ -1365,7 +1365,12 @@
 
 .ps-vendor-footer {
     background-color: #12192a;
-    padding: 20px 0;
+    .image {
+        width: 100%;
+        height: 500px !important;
+        position: relative !important;
+        object-fit: cover; // Optional
+    }
     p {
         padding: 0 0 30px 0;
         font-size: 48px;
@@ -1376,7 +1381,7 @@
     } 
     .button {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         .ps-btn {
             color: #fff;
@@ -1388,6 +1393,13 @@
         @include media('<md') {
             justify-content: center;
         }
+    }
+    .vendor-footer__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
     }
 }
 .ps-vendor-milestone {

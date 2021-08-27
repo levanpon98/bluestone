@@ -20,10 +20,11 @@ const FooterLinks = () => {
 
     const MyMapComponent = withScriptjs(withGoogleMap((props) =>
         <GoogleMap
-            defaultZoom={8}
+            defaultZoom={4}
             defaultCenter={{ lat: -34.397, lng: 150.644 }}
         >
-            {<Marker position={{ lat: -34.397, lng: 150.644 }} />}
+            {<Marker position={ { lat: -34.397, lng: 150.644 }} onClick={()=> {console.log('111111111')}} />}
+            {<Marker position={ { lat: -34.397, lng: 140.644 }} onClick={()=> {console.log('22222222')}}/>}
         </GoogleMap>
     ))
     return (
