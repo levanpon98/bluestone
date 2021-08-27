@@ -11,6 +11,7 @@ const HeaderDefault = () => {
     const [results, setResults] = useState({});
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
+    
     const getContact = async () => {
         const res = await fetch('/api/contact')
         const json = await res.json()

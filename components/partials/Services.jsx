@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-const VendorAbout = () => (
-    <div
+const VendorAbout = () => {
+
+    const [results, setResults] = useState({});
+    const getServices = async () => {
+        const res = await fetch('/api/services')
+        const json = await res.json()
+        setResults(json.data)
+    }
+
+    useEffect(() => {
+        getServices()
+    }, [])
+
+    return (
+        <div
         className="ps-vendor-banner bg--cover"
         style={{ backgroundImage: "url('/static/img/bg/71d0bfbcda5f2d01744e.jpg')" }}
     >
@@ -22,17 +35,7 @@ const VendorAbout = () => (
                             <div className="ps-block__content">
                                 <h4>PROPERTY BUYER’S AGENT</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consec-
-                                    tetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat
-                                    volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud exerci tation
-                                    ullam -
-                                    corper suscipit lobortis nisl ut aliquip
-                                    ex ea commodo consequat. Duis
-                                    autem vel eum iriure dolor in hendrerit
-                                    in vulputate velit esse molestie con -
+                                    {results.service_1}
                                 </p>
                             </div>
                         </div>
@@ -45,17 +48,7 @@ const VendorAbout = () => (
                             <div className="ps-block__content">
                                 <h4>VENDOR ADVOCACY</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consec-
-                                    tetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat
-                                    volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud exerci tation
-                                    ullam -
-                                    corper suscipit lobortis nisl ut aliquip
-                                    ex ea commodo consequat. Duis
-                                    autem vel eum iriure dolor in hendrerit
-                                    in vulputate velit esse molestie con -
+                                    {results.service_2}
                                 </p>
                             </div>
                         </div>
@@ -68,17 +61,7 @@ const VendorAbout = () => (
                             <div className="ps-block__content">
                                 <h4>PROPERTY MANAGEMENT</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consec-
-                                    tetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut
-                                    laoreet dolore magna aliquam erat
-                                    volutpat. Ut wisi enim ad minim
-                                    veniam, quis nostrud exerci tation
-                                    ullam -
-                                    corper suscipit lobortis nisl ut aliquip
-                                    ex ea commodo consequat. Duis
-                                    autem vel eum iriure dolor in hendrerit
-                                    in vulputate velit esse molestie con -
+                                {results.service_3}
                                 </p>
                             </div>
                         </div>
@@ -87,6 +70,7 @@ const VendorAbout = () => (
             </div>
         </div>
     </div>
-);
+    )
+}
 
 export default VendorAbout;
