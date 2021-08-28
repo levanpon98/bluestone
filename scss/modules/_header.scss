@@ -599,6 +599,7 @@
         }
     }
     .ant-modal-body {
+        padding: 24px 24px 0;
         .title {
             text-align: center;
             h2 {
@@ -611,7 +612,11 @@
                 color: #fff;
             }
         }
-
+        .checkbox {
+            &.ant-form-item {
+                margin-bottom: 0;
+            }
+        }
         
         .ant-checkbox-wrapper {
             span {
@@ -691,4 +696,7 @@
         }
     }
     
+}
+.ant-select-selector{
+    border-radius: 10px !important;
 }

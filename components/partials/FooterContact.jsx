@@ -160,7 +160,7 @@ const FooterContact = () => {
                         </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
-                                <Form.Item name="remember" valuePropName="checked">
+                                <Form.Item name="remember" valuePropName="checked" className="checkbox">
                                     <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
                                 </Form.Item>
 

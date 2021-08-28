@@ -13,8 +13,9 @@ const HomeDefaultBanner = () => {
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
     async function getBannerItems() {
         setBannerItems([
-            { link: "1123", image: '/static/img/bg/adelaide-australia-south-australia-wallpaper-preview.jpg' },
-            { link: "1123", image: '/static/img/bg/adelaide-convention-exhibition-centre-wallpaper-preview.jpg' },
+            { link: "#", image: '/static/img/bg/iStock-1222131937.jpg' },
+            { link: "#", image: '/static/img/bg/iStock-1249547317.jpg' },
+            { link: "#", image: '/static/img/bg/iStock-1303302681.jpg' },
         ])
     }
 
@@ -203,7 +204,7 @@ const HomeDefaultBanner = () => {
                         </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
-                                <Form.Item name="remember" valuePropName="checked">
+                                <Form.Item name="remember" valuePropName="checked" className="checkbox">
                                     <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
                                 </Form.Item>
 

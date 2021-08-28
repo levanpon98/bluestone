@@ -1,15 +1,13 @@
-const regexEqual = (x, y) =>
-    x instanceof RegExp &&
-    y instanceof RegExp &&
-    x.source === y.source &&
-    x.global === y.global &&
-    x.ignoreCase === y.ignoreCase &&
-    x.multiline === y.multiline;
 
-module.exports = {
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
+
+const nextSettings = {
     env: {
         title: 'Bluestone',
         titleDescription: 'Bluestone',
     },
-    target: "serverless"
+    target: "serverless",
 };
+
+module.exports = withPlugins([withImages(), nextSettings]);
