@@ -26,7 +26,7 @@ const VendorAbout = () => (
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 ">
+                    <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
                         <div className="ps-block__content">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa id neque aliquam vestibulum morbi blandit cursus risus. Sodales ut eu sem integer vitae justo. Ultricies lacus sed turpis tincidunt. Tincidunt ornare massa eget egestas purus viverra accumsan. Ultrices tincidunt arcu non sodales neque. Nascetur ridiculus mus mauris vitae. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Erat nam at lectus urna duis convallis convallis. Vitae proin sagittis nisl rhoncus.

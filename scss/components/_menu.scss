@@ -162,10 +162,10 @@
         display: inline-block;
         >a {
             display: inline-block;
-            padding: 15px 45px;
-            font-size: 24px;
+            padding: 15px 55px;
+            font-size: 29px;
             // font-weight: 600;
-            line-height: 20px;
+            line-height: 1.2;
             color: #fff;
             &:hover {
                 color: $color-1st;
@@ -267,15 +267,21 @@
 
             >a {
                 padding: 15px 20px;
-                font-size: 20px;
+                font-size: 26px;
             }
          }
          @include media('<xs') {
+
             >a {
-                padding: 15px 20px;
-                font-size: 16px;
+                font-size: 22px;
             }
          }
+        //  @include media('<xs') {
+        //     >a {
+        //         padding: 15px 20px;
+        //         font-size: 16px;
+        //     }
+        //  }
     }
 }
 

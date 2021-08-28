@@ -1188,34 +1188,49 @@
         background-size: cover;
         min-height: 100%;
         width: 100%;
-  height: auto;
+        height: auto;
     }
+
     .ps-section__header {
-        padding: 150px 0;
+        padding: 100px 0 175px 0;
         p {
             color: #fff;
             font-size: 26px;
         }
         h4 {
             color: #fff;
-            font-size: 72px;
+            font-size: 80px;
+        }
+
+        @include media('<lg') {
+            
+        }
+        @include media('<md') {
+           
+        }
+        @include media('<sm') {
+            
+        }
+        @include media('<xs') {
+            padding: 50px 0 50px 0;
+            h4 {
+                font-size: 40px;
+            }
         }
     }
     .ps-section__content {
-        margin-top: 50px;
-        padding-bottom: 100px;
+        
+        padding-bottom: 110px;
         .card-item {
             @include media('<lg') {
                 margin-bottom: 0;
             }
             @include media('<md') {
-                margin-bottom: 50px;
+                margin-bottom: 100px;
             }
             @include media('<sm') {
-                margin-bottom: 70px;
             }
             @include media('<xs') {
-                margin-bottom: 100px;
             }
         }
     }
@@ -1275,24 +1290,58 @@
         z-index: 10;
         
         .ps-section__content {
-            padding-bottom: 150px;
+            padding-bottom: 110px;
         }
         .ps-section__header {
             padding: 150px 0;
             h4 {
                 color: #000;
-                font-size: 72px;
+                font-size: 80px;
+            }
+
+            @include media('<lg') {
+            
+            }
+            @include media('<md') {
+               
+            }
+            @include media('<sm') {
+                
+            }
+            @include media('<xs') {
+                padding: 50px 0 50px 0;
+                h4 {
+                    font-size: 40px;
+                }
             }
         }
         .ps-block__content {
             padding:  0 30px 30px 30px;
             p {
                 color: #000;
-                font-size: 20px;
+                font-size: 30px;
                 text-align: left;
                 margin-bottom: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 16;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
+            @include media('<lg') {
             
+            }
+            @include media('<md') {
+               
+            }
+            @include media('<sm') {
+                
+            }
+            @include media('<xs') {
+                p {
+                    font-size:22px;
+                }
+            }
         }
 
         .info-wrapper {
@@ -1305,10 +1354,9 @@
                 margin-bottom: 30px;
                 .img-back {
                     position: relative;
-                    height: 300px;
-                    width: 300px;
-                    background: rgb(23,24,168);
-                    background: linear-gradient(90deg, rgba(23,24,168,1) 0%, rgba(0,18,69,1) 100%);
+                    height: 415px;
+                    width: 415px;
+                    background-image: linear-gradient(to right, #091047 -1773%, #091047 -1773%, #090a1c -1773%, #090a1c -1773%);
                     border-radius: 20px;
                     img {
                         position: absolute;
@@ -1320,14 +1368,48 @@
                         z-index: 1000;
                         border-radius: 20px;
                     }
+
+                    @include media('<lg') {
+            
+                    }
+                    @include media('<md') {
+                       
+                    }
+                    @include media('<sm') {
+                        
+                    }
+                    @include media('<xs') {
+                        height: 300px;
+                        width: 300px;
+                    }
                 }
             }
             .info-wrapper__name {
                 h4 {
-                    font-size: 24px;
+                    font-size: 42px;
+                    color: #090a1c;
                 }
                 p {
-                    font-size: 22px;
+                    font-size:36px;
+                    color: #090a1c;
+                }
+
+                @include media('<lg') {
+            
+                }
+                @include media('<md') {
+                   
+                }
+                @include media('<sm') {
+                    
+                }
+                @include media('<xs') {
+                    h4 {
+                        font-size: 32px;
+                    }
+                    p {
+                        font-size:22px;
+                    }
                 }
             }
         }
@@ -1391,11 +1473,26 @@
     }
     p {
         padding: 0 0 30px 0;
-        font-size: 48px;
+        font-size: 70px;
         font-weight: 600;
         color: #fff;
         margin-bottom: 0;
         text-align: center;
+
+        @include media('<lg') {
+            
+        }
+        @include media('<md') {
+           
+        }
+        @include media('<sm') {
+            
+        }
+
+        @include media('<xs') {
+            font-size: 40px;
+        }
+        
     } 
     .button {
         display: flex;
@@ -1404,12 +1501,22 @@
         .ps-btn {
             color: #fff;
             background-color: #f9903f;
-            padding: 15px 50px;
+            padding: 20px 112px;
             font-weight: 600;
+            font-size: 36px;
         }
 
         @include media('<md') {
             justify-content: center;
+        }
+        @include media('<sm') {
+            .ps-btn {
+                padding: 20px 42px;
+                font-size: 22px;
+            }
+        }
+        @include media('<xs') {
+            
         }
     }
     .vendor-footer__left {
@@ -2668,8 +2775,7 @@ div[class*='Timeline-wrapper-'] {
     }
 }
 .ps-section__left-content {
-    background: rgb(17,48,103);
-background: linear-gradient(180deg, rgba(17,48,103,0.699334836473652) 0%, rgba(71,104,162,0.5088586459974616) 73%);
+    background-color: rgba(5,22,50, 0.24);
     position: absolute;
     top: 0;
     left: 0;
@@ -2683,10 +2789,10 @@ background: linear-gradient(180deg, rgba(17,48,103,0.699334836473652) 0%, rgba(7
         color: #fff;
     }
     h3 {
-        font-size: 72px;
-        font-weight: 500;
+        font-size: 78.2px;
+        font-weight: 600;
         @include media('<lg') {
-            font-size: 100px;
+            font-size: 50px;
         }
         @include media('<md') {
             font-size: 75px;
@@ -2699,33 +2805,47 @@ background: linear-gradient(180deg, rgba(17,48,103,0.699334836473652) 0%, rgba(7
         }
     }
     h2 {
-        font-size: 100px;
+        font-size: 189px;
         text-transform: uppercase;
-        margin-bottom: 100px;
+        margin-bottom: 148px;
         // ;
         @include media('<lg') {
             font-size: 100px;
-            margin-bottom: 100px;
+            margin-bottom: 75px;
         }
         @include media('<md') {
             font-size: 75px;
-            margin-bottom: 50px;
+            margin-bottom: 75px;;
         }
         @include media('<sm') {
-            font-size: 40px;
-            margin-bottom: 30px;
+            font-size: 50px;
+            margin-bottom: 50px;
         }
         @include media('<xs') {
-            font-size: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
     }
     .ps-btn {
         color: #fff;
         background-color: #f9903f;
-        padding: 20px 75px;
-        font-weight: 500;
-        font-size: 36px;
+        padding: 13px 137px;
+        font-weight: 600;
+        font-size: 43.7px;
+        line-height: 1.2;
+        border-radius: 41px;
+
+        @include media('<lg') {
+            padding: 15px 80px;
+            font-size: 20px;
+        }
+        @include media('<md') {
+            padding: 15px 50px;
+            font-size: 20px;
+        }
+        @include media('<sm') {
+            padding: 15px 40px;
+            font-size: 20px;
+        }
 
         @include media('<xs') { 
             padding: 15px 30px;

@@ -15,10 +15,9 @@ const StyleSheets = () => (
         <meta name="author" content="hmsp" />
         <meta name="keywords" content="bluestone, bluestone reactjs" />
         <meta name="description" content="BLUESTONE BUYERS AGENTS" />
-        {/* <link
-            href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext"
-            rel="stylesheet"
-        /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://use.typekit.net/flp4ysk.css"></link>
         <link
             rel="stylesheet"

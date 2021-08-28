@@ -1810,35 +1810,55 @@
         margin-left: auto;
         margin-right: auto;
         background-color: #fa984d;
-        height: 150px;
-        width: 150px;
+        height: 165px;
+        width: 165px;
         border-radius: 150px;
-        right: calc(50% - 150px);
+        right: calc(50% - 165px);
         transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;
         
         .icon {
-            font-size: 56px;
+            font-size: 85px;
             color: #fff;
             font-weight: 600;
+        }
+
+        @include media('<lg') {
+            
+        }
+        @include media('<md') {
+           
+        }
+        @include media('<sm') {
+            
+        }
+        @include media('<xs') {
+            height: 80px;
+            width: 80px;
+            right: calc(50% - 80px);
+            .icon {
+                font-size: 50px;
+            }
         }
     }
 
     
     .ps-block__content {
         flex: 1;
-        padding: 0 40px 60px 40px;
-        margin-top: 100px;
+        padding: 0 50px 60px 50px;
+        margin-top: 110px;
         display: flex;
         flex-direction: column;
-
+        max-height: 650px;
         .ps-block__content-top {
-            
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex: 1;
             .title {
-                font-size: 30px;
+                font-size: 35px;
                 font-weight: 600;
                 text-transform: uppercase;
                 padding: 0 30px;
@@ -1850,14 +1870,22 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 word-break: break-word;
+                color: #090a1c;
             }
         }
 
         .ps-block__content-bottom {
+            padding-top: 20px;
             text-align: left;
-            font-size: 20px;
+            font-size: 22px;
             margin-top: auto;
             flex-shrink: 0;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 12;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     
         // h4 {

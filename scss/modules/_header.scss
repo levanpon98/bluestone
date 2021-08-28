@@ -54,7 +54,7 @@
     }
 
     .header__left {
-        max-width: 300px;
+        max-width: 250px;
         display: flex;
         align-items: center;
 
@@ -88,7 +88,7 @@
                 
                 .ps-logo {
                     img {
-                        max-height: 50px;
+                        max-width: 300px;
                     }
                 }
             }
@@ -109,11 +109,12 @@
     .header__contact {
         background-color: #f4f5f5;
         .ps-container {
-            font-size: 20px;
+            font-size: 21px;
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            padding: 10px 15px;
+            padding-top: 22px;
+            padding-bottom: 22px;
 
             .header__left {
                 min-width: 300px;
@@ -134,8 +135,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 30px;
-                    height: 30px;
+                    width: 28.4px;
+                    height: 28.4px;
                     border-radius: 20px;
                     background-color: #000;
                     color: #fff;

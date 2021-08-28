@@ -1,12 +1,4 @@
 "use strict";
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
 exports.id = "pages/api/contact";
@@ -19,7 +11,42 @@ exports.modules = {
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-connect */ \"next-connect\");\n/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_connect__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconst MONGODB_URI = process.env.MONGODB_URI;\nconst MONGODB_DB = process.env.MONGODB_DB;\n\nif (!MONGODB_URI) {\n  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');\n}\n\nif (!MONGODB_DB) {\n  throw new Error('Please define the MONGODB_DB environment variable inside .env.local');\n}\n\nconst client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, {\n  useNewUrlParser: true,\n  useUnifiedTopology: true\n});\n\nasync function database(req, res, next) {\n  if (!client.isConnected()) await client.connect();\n  req.dbClient = client;\n  req.db = client.db(MONGODB_DB);\n  return next();\n}\n\nconst middleware = next_connect__WEBPACK_IMPORTED_MODULE_1___default()();\nmiddleware.use(database);\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (middleware);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9saWIvbW9uZ29kYi5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBO0FBQ0E7QUFFQSxNQUFNRSxXQUFXLEdBQUdDLE9BQU8sQ0FBQ0MsR0FBUixDQUFZRixXQUFoQztBQUNBLE1BQU1HLFVBQVUsR0FBR0YsT0FBTyxDQUFDQyxHQUFSLENBQVlDLFVBQS9COztBQUVBLElBQUksQ0FBQ0gsV0FBTCxFQUFrQjtBQUNoQixRQUFNLElBQUlJLEtBQUosQ0FDSixzRUFESSxDQUFOO0FBR0Q7O0FBRUQsSUFBSSxDQUFDRCxVQUFMLEVBQWlCO0FBQ2YsUUFBTSxJQUFJQyxLQUFKLENBQ0oscUVBREksQ0FBTjtBQUdEOztBQUVELE1BQU1DLE1BQU0sR0FBRyxJQUFJUCxnREFBSixDQUFnQkUsV0FBaEIsRUFBNkI7QUFDMUNNLEVBQUFBLGVBQWUsRUFBRSxJQUR5QjtBQUUxQ0MsRUFBQUEsa0JBQWtCLEVBQUU7QUFGc0IsQ0FBN0IsQ0FBZjs7QUFLQSxlQUFlQyxRQUFmLENBQXdCQyxHQUF4QixFQUE2QkMsR0FBN0IsRUFBa0NDLElBQWxDLEVBQXdDO0FBQ3RDLE1BQUksQ0FBQ04sTUFBTSxDQUFDTyxXQUFQLEVBQUwsRUFBMkIsTUFBTVAsTUFBTSxDQUFDUSxPQUFQLEVBQU47QUFDM0JKLEVBQUFBLEdBQUcsQ0FBQ0ssUUFBSixHQUFlVCxNQUFmO0FBQ0FJLEVBQUFBLEdBQUcsQ0FBQ00sRUFBSixHQUFTVixNQUFNLENBQUNVLEVBQVAsQ0FBVVosVUFBVixDQUFUO0FBQ0EsU0FBT1EsSUFBSSxFQUFYO0FBQ0Q7O0FBQ0QsTUFBTUssVUFBVSxHQUFHakIsbURBQVcsRUFBOUI7QUFDQWlCLFVBQVUsQ0FBQ0MsR0FBWCxDQUFlVCxRQUFmO0FBQ0EsaUVBQWVRLFVBQWYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9obXNwX3JlYWN0Ly4vbGliL21vbmdvZGIuanM/ZmI2NiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBNb25nb0NsaWVudCB9IGZyb20gJ21vbmdvZGInXG5pbXBvcnQgbmV4dENvbm5lY3QgZnJvbSAnbmV4dC1jb25uZWN0JztcblxuY29uc3QgTU9OR09EQl9VUkkgPSBwcm9jZXNzLmVudi5NT05HT0RCX1VSSVxuY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52Lk1PTkdPREJfREJcblxuaWYgKCFNT05HT0RCX1VSSSkge1xuICB0aHJvdyBuZXcgRXJyb3IoXG4gICAgJ1BsZWFzZSBkZWZpbmUgdGhlIE1PTkdPREJfVVJJIGVudmlyb25tZW50IHZhcmlhYmxlIGluc2lkZSAuZW52LmxvY2FsJ1xuICApXG59XG5cbmlmICghTU9OR09EQl9EQikge1xuICB0aHJvdyBuZXcgRXJyb3IoXG4gICAgJ1BsZWFzZSBkZWZpbmUgdGhlIE1PTkdPREJfREIgZW52aXJvbm1lbnQgdmFyaWFibGUgaW5zaWRlIC5lbnYubG9jYWwnXG4gIClcbn1cblxuY29uc3QgY2xpZW50ID0gbmV3IE1vbmdvQ2xpZW50KE1PTkdPREJfVVJJLCB7XG4gIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcbiAgdXNlVW5pZmllZFRvcG9sb2d5OiB0cnVlLFxufSk7XG5cbmFzeW5jIGZ1bmN0aW9uIGRhdGFiYXNlKHJlcSwgcmVzLCBuZXh0KSB7XG4gIGlmICghY2xpZW50LmlzQ29ubmVjdGVkKCkpIGF3YWl0IGNsaWVudC5jb25uZWN0KCk7XG4gIHJlcS5kYkNsaWVudCA9IGNsaWVudDtcbiAgcmVxLmRiID0gY2xpZW50LmRiKE1PTkdPREJfREIpO1xuICByZXR1cm4gbmV4dCgpO1xufVxuY29uc3QgbWlkZGxld2FyZSA9IG5leHRDb25uZWN0KCk7XG5taWRkbGV3YXJlLnVzZShkYXRhYmFzZSk7XG5leHBvcnQgZGVmYXVsdCBtaWRkbGV3YXJlOyJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsIm5leHRDb25uZWN0IiwiTU9OR09EQl9VUkkiLCJwcm9jZXNzIiwiZW52IiwiTU9OR09EQl9EQiIsIkVycm9yIiwiY2xpZW50IiwidXNlTmV3VXJsUGFyc2VyIiwidXNlVW5pZmllZFRvcG9sb2d5IiwiZGF0YWJhc2UiLCJyZXEiLCJyZXMiLCJuZXh0IiwiaXNDb25uZWN0ZWQiLCJjb25uZWN0IiwiZGJDbGllbnQiLCJkYiIsIm1pZGRsZXdhcmUiLCJ1c2UiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./lib/mongodb.js\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ "mongodb");
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-connect */ "next-connect");
+/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_connect__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_DB = process.env.MONGODB_DB;
+
+if (!MONGODB_URI) {
+  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+}
+
+if (!MONGODB_DB) {
+  throw new Error('Please define the MONGODB_DB environment variable inside .env.local');
+}
+
+const client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+async function database(req, res, next) {
+  if (!client.isConnected()) await client.connect();
+  req.dbClient = client;
+  req.db = client.db(MONGODB_DB);
+  return next();
+}
+
+const middleware = next_connect__WEBPACK_IMPORTED_MODULE_1___default()();
+middleware.use(database);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (middleware);
 
 /***/ }),
 
@@ -29,7 +56,56 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-connect */ \"next-connect\");\n/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_connect__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _lib_mongodb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/lib/mongodb */ \"./lib/mongodb.js\");\n\n\n\nconst bcrypt = __webpack_require__(/*! bcryptjs */ \"bcryptjs\");\n\nconst jwt = __webpack_require__(/*! jsonwebtoken */ \"jsonwebtoken\");\n\nconst handler = next_connect__WEBPACK_IMPORTED_MODULE_0___default()();\nhandler.use(_lib_mongodb__WEBPACK_IMPORTED_MODULE_1__.default);\nhandler.post(async (req, res) => {\n  let data = req.body;\n  data = JSON.parse(data);\n  await req.db.collection('config').updateOne({\n    name: 'contact'\n  }, {\n    $set: data\n  });\n  return res.status(200).json({\n    message: \"OK\",\n    status: 200,\n    success: true\n  });\n});\nhandler.get(async (req, res) => {\n  const contact = await req.db.collection('config').findOne({\n    name: 'contact'\n  });\n\n  if (contact) {\n    return res.status(200).json({\n      data: contact,\n      message: \"OK\",\n      status: 200,\n      success: true\n    });\n  } else {\n    return res.status(400).json({\n      status: 400,\n      success: false\n    });\n  }\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (handler);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9hcGkvY29udGFjdC5qc3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0FBQ0E7O0FBRUEsTUFBTUUsTUFBTSxHQUFHQyxtQkFBTyxDQUFDLDBCQUFELENBQXRCOztBQUNBLE1BQU1DLEdBQUcsR0FBR0QsbUJBQU8sQ0FBQyxrQ0FBRCxDQUFuQjs7QUFDQSxNQUFNRSxPQUFPLEdBQUdMLG1EQUFXLEVBQTNCO0FBRUFLLE9BQU8sQ0FBQ0MsR0FBUixDQUFZTCxpREFBWjtBQUVBSSxPQUFPLENBQUNFLElBQVIsQ0FBYSxPQUFPQyxHQUFQLEVBQVlDLEdBQVosS0FBb0I7QUFDN0IsTUFBSUMsSUFBSSxHQUFHRixHQUFHLENBQUNHLElBQWY7QUFDQUQsRUFBQUEsSUFBSSxHQUFHRSxJQUFJLENBQUNDLEtBQUwsQ0FBV0gsSUFBWCxDQUFQO0FBQ0EsUUFBTUYsR0FBRyxDQUFDTSxFQUFKLENBQU9DLFVBQVAsQ0FBa0IsUUFBbEIsRUFBNEJDLFNBQTVCLENBQXNDO0FBQUNDLElBQUFBLElBQUksRUFBRTtBQUFQLEdBQXRDLEVBQXlEO0FBQUNDLElBQUFBLElBQUksRUFBQ1I7QUFBTixHQUF6RCxDQUFOO0FBRUEsU0FBT0QsR0FBRyxDQUFDVSxNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUI7QUFDeEJDLElBQUFBLE9BQU8sRUFBRSxJQURlO0FBRXhCRixJQUFBQSxNQUFNLEVBQUUsR0FGZ0I7QUFHeEJHLElBQUFBLE9BQU8sRUFBRTtBQUhlLEdBQXJCLENBQVA7QUFLSCxDQVZEO0FBWUFqQixPQUFPLENBQUNrQixHQUFSLENBQVksT0FBT2YsR0FBUCxFQUFZQyxHQUFaLEtBQW9CO0FBQzVCLFFBQU1lLE9BQU8sR0FBRyxNQUFNaEIsR0FBRyxDQUFDTSxFQUFKLENBQU9DLFVBQVAsQ0FBa0IsUUFBbEIsRUFBNEJVLE9BQTVCLENBQW9DO0FBQUNSLElBQUFBLElBQUksRUFBRTtBQUFQLEdBQXBDLENBQXRCOztBQUVBLE1BQUlPLE9BQUosRUFBYTtBQUNULFdBQU9mLEdBQUcsQ0FBQ1UsTUFBSixDQUFXLEdBQVgsRUFBZ0JDLElBQWhCLENBQXFCO0FBQ3hCVixNQUFBQSxJQUFJLEVBQUVjLE9BRGtCO0FBRXhCSCxNQUFBQSxPQUFPLEVBQUUsSUFGZTtBQUd4QkYsTUFBQUEsTUFBTSxFQUFFLEdBSGdCO0FBSXhCRyxNQUFBQSxPQUFPLEVBQUU7QUFKZSxLQUFyQixDQUFQO0FBTUgsR0FQRCxNQU9PO0FBQ0gsV0FBT2IsR0FBRyxDQUFDVSxNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUI7QUFDeEJELE1BQUFBLE1BQU0sRUFBRSxHQURnQjtBQUV4QkcsTUFBQUEsT0FBTyxFQUFFO0FBRmUsS0FBckIsQ0FBUDtBQUlIO0FBRUosQ0FqQkQ7QUFvQkEsaUVBQWVqQixPQUFmIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vaG1zcF9yZWFjdC8uL3BhZ2VzL2FwaS9jb250YWN0LmpzeD8yZDdkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBuZXh0Q29ubmVjdCBmcm9tICduZXh0LWNvbm5lY3QnO1xuaW1wb3J0IG1pZGRsZXdhcmUgZnJvbSAnfi9saWIvbW9uZ29kYic7XG5cbmNvbnN0IGJjcnlwdCA9IHJlcXVpcmUoJ2JjcnlwdGpzJyk7XG5jb25zdCBqd3QgPSByZXF1aXJlKCdqc29ud2VidG9rZW4nKTtcbmNvbnN0IGhhbmRsZXIgPSBuZXh0Q29ubmVjdCgpO1xuXG5oYW5kbGVyLnVzZShtaWRkbGV3YXJlKTtcblxuaGFuZGxlci5wb3N0KGFzeW5jIChyZXEsIHJlcykgPT4ge1xuICAgIGxldCBkYXRhID0gcmVxLmJvZHk7XG4gICAgZGF0YSA9IEpTT04ucGFyc2UoZGF0YSk7XG4gICAgYXdhaXQgcmVxLmRiLmNvbGxlY3Rpb24oJ2NvbmZpZycpLnVwZGF0ZU9uZSh7bmFtZTogJ2NvbnRhY3QnfSwgeyRzZXQ6ZGF0YX0pXG5cbiAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLmpzb24oe1xuICAgICAgICBtZXNzYWdlOiBcIk9LXCIsXG4gICAgICAgIHN0YXR1czogMjAwLFxuICAgICAgICBzdWNjZXNzOiB0cnVlLFxuICAgIH0pXG59KVxuXG5oYW5kbGVyLmdldChhc3luYyAocmVxLCByZXMpID0+IHtcbiAgICBjb25zdCBjb250YWN0ID0gYXdhaXQgcmVxLmRiLmNvbGxlY3Rpb24oJ2NvbmZpZycpLmZpbmRPbmUoe25hbWU6ICdjb250YWN0J30pXG5cbiAgICBpZiAoY29udGFjdCkge1xuICAgICAgICByZXR1cm4gcmVzLnN0YXR1cygyMDApLmpzb24oe1xuICAgICAgICAgICAgZGF0YTogY29udGFjdCxcbiAgICAgICAgICAgIG1lc3NhZ2U6IFwiT0tcIixcbiAgICAgICAgICAgIHN0YXR1czogMjAwLFxuICAgICAgICAgICAgc3VjY2VzczogdHJ1ZSxcbiAgICAgICAgfSlcbiAgICB9IGVsc2Uge1xuICAgICAgICByZXR1cm4gcmVzLnN0YXR1cyg0MDApLmpzb24oe1xuICAgICAgICAgICAgc3RhdHVzOiA0MDAsXG4gICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSxcbiAgICAgICAgfSlcbiAgICB9XG4gICAgXG59KVxuXG5cbmV4cG9ydCBkZWZhdWx0IGhhbmRsZXIiXSwibmFtZXMiOlsibmV4dENvbm5lY3QiLCJtaWRkbGV3YXJlIiwiYmNyeXB0IiwicmVxdWlyZSIsImp3dCIsImhhbmRsZXIiLCJ1c2UiLCJwb3N0IiwicmVxIiwicmVzIiwiZGF0YSIsImJvZHkiLCJKU09OIiwicGFyc2UiLCJkYiIsImNvbGxlY3Rpb24iLCJ1cGRhdGVPbmUiLCJuYW1lIiwiJHNldCIsInN0YXR1cyIsImpzb24iLCJtZXNzYWdlIiwic3VjY2VzcyIsImdldCIsImNvbnRhY3QiLCJmaW5kT25lIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/api/contact.jsx\n");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-connect */ "next-connect");
+/* harmony import */ var next_connect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_connect__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib_mongodb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/lib/mongodb */ "./lib/mongodb.js");
+
+
+
+const bcrypt = __webpack_require__(/*! bcryptjs */ "bcryptjs");
+
+const jwt = __webpack_require__(/*! jsonwebtoken */ "jsonwebtoken");
+
+const handler = next_connect__WEBPACK_IMPORTED_MODULE_0___default()();
+handler.use(_lib_mongodb__WEBPACK_IMPORTED_MODULE_1__.default);
+handler.post(async (req, res) => {
+  let data = req.body;
+  data = JSON.parse(data);
+  await req.db.collection('config').updateOne({
+    name: 'contact'
+  }, {
+    $set: data
+  });
+  return res.status(200).json({
+    message: "OK",
+    status: 200,
+    success: true
+  });
+});
+handler.get(async (req, res) => {
+  const contact = await req.db.collection('config').findOne({
+    name: 'contact'
+  });
+
+  if (contact) {
+    return res.status(200).json({
+      data: contact,
+      message: "OK",
+      status: 200,
+      success: true
+    });
+  } else {
+    return res.status(400).json({
+      status: 400,
+      success: false
+    });
+  }
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (handler);
 
 /***/ }),
 
@@ -84,3 +160,4 @@ var __webpack_exports__ = (__webpack_exec__("./pages/api/contact.jsx"));
 module.exports = __webpack_exports__;
 
 })();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QjtBQUl4QkcsTUFBQUEsT0FBTyxFQUFFO0FBSmUsS0FBckIsQ0FBUDtBQU1ILEdBUEQsTUFPTztBQUNILFdBQU94QixHQUFHLENBQUNxQixNQUFKLENBQVcsR0FBWCxFQUFnQkMsSUFBaEIsQ0FBcUI7QUFDeEJELE1BQUFBLE1BQU0sRUFBRSxHQURnQjtBQUV4QkcsTUFBQUEsT0FBTyxFQUFFO0FBRmUsS0FBckIsQ0FBUDtBQUlIO0FBRUosQ0FqQkQ7QUFvQkEsaUVBQWViLE9BQWY7Ozs7Ozs7Ozs7QUN6Q0E7Ozs7Ozs7Ozs7QUNBQTs7Ozs7Ozs7OztBQ0FBOzs7Ozs7Ozs7O0FDQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9obXNwX3JlYWN0Ly4vbGliL21vbmdvZGIuanMiLCJ3ZWJwYWNrOi8vaG1zcF9yZWFjdC8uL3BhZ2VzL2FwaS9jb250YWN0LmpzeCIsIndlYnBhY2s6Ly9obXNwX3JlYWN0L2V4dGVybmFsIFwiYmNyeXB0anNcIiIsIndlYnBhY2s6Ly9obXNwX3JlYWN0L2V4dGVybmFsIFwianNvbndlYnRva2VuXCIiLCJ3ZWJwYWNrOi8vaG1zcF9yZWFjdC9leHRlcm5hbCBcIm1vbmdvZGJcIiIsIndlYnBhY2s6Ly9obXNwX3JlYWN0L2V4dGVybmFsIFwibmV4dC1jb25uZWN0XCIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTW9uZ29DbGllbnQgfSBmcm9tICdtb25nb2RiJ1xyXG5pbXBvcnQgbmV4dENvbm5lY3QgZnJvbSAnbmV4dC1jb25uZWN0JztcclxuXHJcbmNvbnN0IE1PTkdPREJfVVJJID0gcHJvY2Vzcy5lbnYuTU9OR09EQl9VUklcclxuY29uc3QgTU9OR09EQl9EQiA9IHByb2Nlc3MuZW52Lk1PTkdPREJfREJcclxuXHJcbmlmICghTU9OR09EQl9VUkkpIHtcclxuICB0aHJvdyBuZXcgRXJyb3IoXHJcbiAgICAnUGxlYXNlIGRlZmluZSB0aGUgTU9OR09EQl9VUkkgZW52aXJvbm1lbnQgdmFyaWFibGUgaW5zaWRlIC5lbnYubG9jYWwnXHJcbiAgKVxyXG59XHJcblxyXG5pZiAoIU1PTkdPREJfREIpIHtcclxuICB0aHJvdyBuZXcgRXJyb3IoXHJcbiAgICAnUGxlYXNlIGRlZmluZSB0aGUgTU9OR09EQl9EQiBlbnZpcm9ubWVudCB2YXJpYWJsZSBpbnNpZGUgLmVudi5sb2NhbCdcclxuICApXHJcbn1cclxuXHJcbmNvbnN0IGNsaWVudCA9IG5ldyBNb25nb0NsaWVudChNT05HT0RCX1VSSSwge1xyXG4gIHVzZU5ld1VybFBhcnNlcjogdHJ1ZSxcclxuICB1c2VVbmlmaWVkVG9wb2xvZ3k6IHRydWUsXHJcbn0pO1xyXG5cclxuYXN5bmMgZnVuY3Rpb24gZGF0YWJhc2UocmVxLCByZXMsIG5leHQpIHtcclxuICBpZiAoIWNsaWVudC5pc0Nvbm5lY3RlZCgpKSBhd2FpdCBjbGllbnQuY29ubmVjdCgpO1xyXG4gIHJlcS5kYkNsaWVudCA9IGNsaWVudDtcclxuICByZXEuZGIgPSBjbGllbnQuZGIoTU9OR09EQl9EQik7XHJcbiAgcmV0dXJuIG5leHQoKTtcclxufVxyXG5jb25zdCBtaWRkbGV3YXJlID0gbmV4dENvbm5lY3QoKTtcclxubWlkZGxld2FyZS51c2UoZGF0YWJhc2UpO1xyXG5leHBvcnQgZGVmYXVsdCBtaWRkbGV3YXJlOyIsImltcG9ydCBuZXh0Q29ubmVjdCBmcm9tICduZXh0LWNvbm5lY3QnO1xyXG5pbXBvcnQgbWlkZGxld2FyZSBmcm9tICd+L2xpYi9tb25nb2RiJztcclxuXHJcbmNvbnN0IGJjcnlwdCA9IHJlcXVpcmUoJ2JjcnlwdGpzJyk7XHJcbmNvbnN0IGp3dCA9IHJlcXVpcmUoJ2pzb253ZWJ0b2tlbicpO1xyXG5jb25zdCBoYW5kbGVyID0gbmV4dENvbm5lY3QoKTtcclxuXHJcbmhhbmRsZXIudXNlKG1pZGRsZXdhcmUpO1xyXG5cclxuaGFuZGxlci5wb3N0KGFzeW5jIChyZXEsIHJlcykgPT4ge1xyXG4gICAgbGV0IGRhdGEgPSByZXEuYm9keTtcclxuICAgIGRhdGEgPSBKU09OLnBhcnNlKGRhdGEpO1xyXG4gICAgYXdhaXQgcmVxLmRiLmNvbGxlY3Rpb24oJ2NvbmZpZycpLnVwZGF0ZU9uZSh7bmFtZTogJ2NvbnRhY3QnfSwgeyRzZXQ6ZGF0YX0pXHJcblxyXG4gICAgcmV0dXJuIHJlcy5zdGF0dXMoMjAwKS5qc29uKHtcclxuICAgICAgICBtZXNzYWdlOiBcIk9LXCIsXHJcbiAgICAgICAgc3RhdHVzOiAyMDAsXHJcbiAgICAgICAgc3VjY2VzczogdHJ1ZSxcclxuICAgIH0pXHJcbn0pXHJcblxyXG5oYW5kbGVyLmdldChhc3luYyAocmVxLCByZXMpID0+IHtcclxuICAgIGNvbnN0IGNvbnRhY3QgPSBhd2FpdCByZXEuZGIuY29sbGVjdGlvbignY29uZmlnJykuZmluZE9uZSh7bmFtZTogJ2NvbnRhY3QnfSlcclxuXHJcbiAgICBpZiAoY29udGFjdCkge1xyXG4gICAgICAgIHJldHVybiByZXMuc3RhdHVzKDIwMCkuanNvbih7XHJcbiAgICAgICAgICAgIGRhdGE6IGNvbnRhY3QsXHJcbiAgICAgICAgICAgIG1lc3NhZ2U6IFwiT0tcIixcclxuICAgICAgICAgICAgc3RhdHVzOiAyMDAsXHJcbiAgICAgICAgICAgIHN1Y2Nlc3M6IHRydWUsXHJcbiAgICAgICAgfSlcclxuICAgIH0gZWxzZSB7XHJcbiAgICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNDAwKS5qc29uKHtcclxuICAgICAgICAgICAgc3RhdHVzOiA0MDAsXHJcbiAgICAgICAgICAgIHN1Y2Nlc3M6IGZhbHNlLFxyXG4gICAgICAgIH0pXHJcbiAgICB9XHJcbiAgICBcclxufSlcclxuXHJcblxyXG5leHBvcnQgZGVmYXVsdCBoYW5kbGVyIiwibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwiYmNyeXB0anNcIik7IiwibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwianNvbndlYnRva2VuXCIpOyIsIm1vZHVsZS5leHBvcnRzID0gcmVxdWlyZShcIm1vbmdvZGJcIik7IiwibW9kdWxlLmV4cG9ydHMgPSByZXF1aXJlKFwibmV4dC1jb25uZWN0XCIpOyJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsIm5leHRDb25uZWN0IiwiTU9OR09EQl9VUkkiLCJwcm9jZXNzIiwiZW52IiwiTU9OR09EQl9EQiIsIkVycm9yIiwiY2xpZW50IiwidXNlTmV3VXJsUGFyc2VyIiwidXNlVW5pZmllZFRvcG9sb2d5IiwiZGF0YWJhc2UiLCJyZXEiLCJyZXMiLCJuZXh0IiwiaXNDb25uZWN0ZWQiLCJjb25uZWN0IiwiZGJDbGllbnQiLCJkYiIsIm1pZGRsZXdhcmUiLCJ1c2UiLCJiY3J5cHQiLCJyZXF1aXJlIiwiand0IiwiaGFuZGxlciIsInBvc3QiLCJkYXRhIiwiYm9keSIsIkpTT04iLCJwYXJzZSIsImNvbGxlY3Rpb24iLCJ1cGRhdGVPbmUiLCJuYW1lIiwiJHNldCIsInN0YXR1cyIsImpzb24iLCJtZXNzYWdlIiwic3VjY2VzcyIsImdldCIsImNvbnRhY3QiLCJmaW5kT25lIl0sInNvdXJjZVJvb3QiOiIifQ==

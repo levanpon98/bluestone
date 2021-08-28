@@ -27,16 +27,44 @@
         // }
         &.slick-prev {
             left: 0;
+            margin-left: 50px;
+
+            @include media('<lg') {
+                margin-left: 40px;
+            }
+            @include media('<md') {
+                margin-left: 30px;
+            }
+            @include media('<sm') {
+                margin-left: 20px;
+            }
+            @include media('<xs') {
+                margin-left: 0px;
+            }
         }
 
         &.slick-next {
             right: 0;
+            margin-right: 50px;
+
+            @include media('<lg') {
+                margin-right: 40px;
+            }
+            @include media('<md') {
+                margin-right: 30px;
+            }
+            @include media('<sm') {
+                margin-right: 20px;
+            }
+            @include media('<xs') {
+                margin-right: 0px;
+            }
         }
     }
 
     .slick-dots {
         margin: 0;
-        padding: 20px;
+        padding: 71px 0px;
         width: 100%;
         list-style-type: none;
         text-align: center;
@@ -49,13 +77,12 @@
             vertical-align: top;
             button {
                 display: block;
-                vertical-align: top;
                 padding: 0;
                 font-size: 0;
                 border-radius: 0;
                 border: none;
-                width: 15px;
-                height: 15px;
+                width: 12.5px;
+                height: 12.5px;
                 background-color: transparent;
                 border-radius: 50%;
                 border: 1px solid #fff;
@@ -68,6 +95,19 @@
                     background-color: #fff;
                 }
             }
+        }
+
+        @include media('<lg') {
+            padding: 25px 0px;
+        }
+        @include media('<md') {
+            
+        }
+        @include media('<sm') {
+           
+        }
+        @include media('<xs') {
+            
         }
     }
 
