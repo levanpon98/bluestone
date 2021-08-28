@@ -38,10 +38,7 @@ const HeaderDefault = () => {
         setModalSuccessVisible(true)
     };
     return (
-        <header
-            className="header header--sticky"
-            data-sticky="true"
-            id="headerSticky">
+        <header className="header" data-sticky="true" id="headerSticky">
             <div className="header-wrapper">
                 <div className="content">
                     <div className="header__contact">

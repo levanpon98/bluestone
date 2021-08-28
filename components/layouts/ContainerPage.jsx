@@ -17,7 +17,7 @@ const ContainerPage = ({ children, title, boxed = false }) => {
             <Head>
                 <title>{titleView}</title>
             </Head>
-            <HeaderContact />
+            {/* <HeaderContact /> */}
             <HeaderDefault />
             {/* <HeaderMobile /> */}
             <main>{children}</main>

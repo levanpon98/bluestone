@@ -24,7 +24,7 @@ const HomeDefaultBanner = () => {
     }, []);
 
     const carouselSetting = {
-        dots: false,
+        dots: true,
         autoplay: true,
         infinite: true,
         speed: 500,
@@ -35,7 +35,7 @@ const HomeDefaultBanner = () => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
-
+    
     // Views
     let mainCarouselView;
     if (bannerItems) {
