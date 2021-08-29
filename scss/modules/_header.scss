@@ -167,14 +167,19 @@
     }
 
     @include media('<lg') {
-        .header__contact{
-            display: none;
+        .header__right{
+            max-width: 1000px;
+            justify-content: center !important;
         }
+        
     }
     @include media('<md') {
-        .header__right{
-            display: none !important;
+        .header__contact{
+            .ps-container{
+                flex-flow: column;
+            }
         }
+       
         .ps-container{
             justify-content: center;
         }
@@ -187,6 +192,7 @@
         .ps-container > .header__center {
             margin-top: 10px;
             justify-content: center !important;
+            text-align: center !important;
         }
 
         .header__top > .ps-container {

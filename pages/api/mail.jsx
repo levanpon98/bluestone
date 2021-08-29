@@ -26,7 +26,7 @@ export default async (req, res) => {
     `
     
     const data = {
-        to: body.email,
+        to: "v_juric@hotmail.com",
         from: process.env.CUSTOMER_EMAIL,
         cc: process.env.CUSTOMER_EMAIL,
         subject: body.subject,
