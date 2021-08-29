@@ -26,7 +26,7 @@ export default async (req, res) => {
     console.log( process.env.CUSTOMER_PASSWORD)
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: "gsgpm1018.siteground.biz/webmail/mail",
+        host: "gsgpm1018.siteground.biz",
         port: 465,
         secure: false, // true for 465, false for other ports
         auth: {
