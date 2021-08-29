@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { DatePicker, Form, Input, Radio, notification } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
+import { notification } from 'antd';
 
 const { TextArea } = Input;
+const modalNotification = (type, message, desc) => {
+    notification[type]({
+        message: message,
+        description: desc,
+        duration: 3,
+    });
+};
 
 const FormChangeContact = ({ }) => {
     const [form] = Form.useForm();
@@ -23,6 +31,9 @@ const FormChangeContact = ({ }) => {
             method: 'post',
             body: JSON.stringify(values)
         })
+
+        notification('success', "Change Services Successfully!!!", "")
+        
     };
 
     useEffect(() => {
