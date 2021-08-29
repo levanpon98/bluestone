@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import NextArrow from '~/components/elements/carousel/NextArrow';
 import PrevArrow from '~/components/elements/carousel/PrevArrow';
 import Link from 'next/link';
 import { Modal, Button, Form, Input, Select, Checkbox } from 'antd';
+import Recaptcha from 'react-google-invisible-recaptcha';
 const { TextArea } = Input;
 const { Option } = Select;
 
@@ -11,6 +12,7 @@ const HomeDefaultBanner = () => {
     const [bannerItems, setBannerItems] = useState(null);
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
+    const reRef = useRef();
     async function getBannerItems() {
         setBannerItems([
             { link: "#", image: '/static/img/bg/iStock-1222131937.jpg' },
@@ -35,7 +37,7 @@ const HomeDefaultBanner = () => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
     };
-    
+
     // Views
     let mainCarouselView;
     if (bannerItems) {
@@ -64,6 +66,7 @@ const HomeDefaultBanner = () => {
     }
 
     const onFinish = async (values) => {
+        reRef.current.execute();
         const res = await fetch('/api/mail', {
             method: 'post',
             body: JSON.stringify(values)
@@ -72,10 +75,11 @@ const HomeDefaultBanner = () => {
             setModalVisible(false)
             setModalSuccessVisible(true)
         } else {
-            
+
         }
-        
     };
+    
+
     return (
         <div className="ps-home-banner ps-home-banner--1">
             <div className="ps-container-homebanner">
@@ -210,6 +214,15 @@ const HomeDefaultBanner = () => {
                                 </Form.Item>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <Recaptcha
+                                    sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
+                                    ref={reRef}
+                                    onResolved={ () => console.log( 'Human detected.' ) }
+                                />
+                            </div>
+                        </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
@@ -224,6 +237,7 @@ const HomeDefaultBanner = () => {
                                 </button>
                             </div>
                         </div>
+
                     </Form>
                 </div>
             </Modal>

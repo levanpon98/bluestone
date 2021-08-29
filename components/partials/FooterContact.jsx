@@ -1,13 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image'
 import { Modal, Button, Form, Input, Select, Checkbox } from 'antd';
+import Recaptcha from 'react-google-invisible-recaptcha';
 const { TextArea } = Input;
 const { Option } = Select;
 
 const FooterContact = () => {
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
-
+    const reRef = useRef();
     const onFinish = async (values) => {
         const res = await fetch('/api/mail', {
             method: 'post',
@@ -17,7 +18,7 @@ const FooterContact = () => {
             setModalVisible(false)
             setModalSuccessVisible(true)
         } else {
-            
+
         }
     };
     return (
@@ -66,6 +67,11 @@ const FooterContact = () => {
                 </div>
                 <div className="form">
                     <Form layout="vertical" onFinish={onFinish}>
+                        <Recaptcha
+                            sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
+                            ref={reRef}
+                            onResolved={() => console.log('Human detected.')}
+                        />
                         <div className="row">
                             <div className="col-md-6">
                                 <Form.Item
