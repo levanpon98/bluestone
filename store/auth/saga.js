@@ -50,7 +50,7 @@ function* loginSaga(action) {
             Cookie.set('userId', response.userId)
             yield put(loginSuccess(response));
             modal('success', "Login Successfully!!!", "Welcome Back!!!")
-            route.push('/')
+            route.push('/admin')
         } else {
             yield put(loginFailure('Wrong username/password.'));
             modal('warning', "Login Fail", "Wrong username/password.")
