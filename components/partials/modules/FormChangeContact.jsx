@@ -33,7 +33,7 @@ const FormChangeContact = ({ }) => {
             body: JSON.stringify(values)
         })
 
-        notification('success', "Change Contact Successfully!!!", "")
+        modalNotification('success', "Change Contact Successfully!!!", "")
     };
 
     useEffect(() => {
