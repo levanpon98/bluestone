@@ -177,6 +177,9 @@
         .header__contact{
             .ps-container{
                 flex-flow: column;
+                .header__center {
+                    display: none;
+                }
             }
         }
        
@@ -186,7 +189,6 @@
         .header__left {
             display: flex;
             justify-content: center;
-            
         }
 
         .ps-container > .header__center {
