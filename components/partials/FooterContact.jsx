@@ -32,7 +32,7 @@ const FooterContact = () => {
                             <button className="ps-btn" onClick={() => {
                                 setModalVisible(true)
                             }}>
-                                Request A consultation
+                                Request A Consultation
                             </button>
                         </div>
 

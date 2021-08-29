@@ -1871,6 +1871,14 @@
                 text-overflow: ellipsis;
                 word-break: break-word;
                 color: #090a1c;
+
+                @include media('<md') {
+                    font-size: 30px;
+                }
+                
+                @include media('<xs') {
+                    font-size: 28px;
+                }
             }
         }
 
