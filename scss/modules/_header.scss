@@ -164,6 +164,12 @@
             width: 100%;
             z-index: 1000;
         }
+
+        @include media('<lg') {
+            .content {
+                position: inherit
+            }
+        }
     }
 
     @include media('<lg') {
