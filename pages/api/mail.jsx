@@ -1,6 +1,7 @@
 import { message } from 'antd'
 import { notification } from 'antd';
 
+const nodemailer = require("nodemailer");
 const modalNotification = (type, message, desc) => {
     notification[type]({
         message: message,
@@ -9,13 +10,9 @@ const modalNotification = (type, message, desc) => {
     });
 };
 
-const mail = require('@sendgrid/mail')
-
-mail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default async (req, res) => {
-    const body = JSON.parse(req.body)
-
+    const body = req.body
     const message = `
         First Name: ${body.firstname}\r\n
         Last Name: ${body.lastname}\r\n
@@ -24,21 +21,32 @@ export default async (req, res) => {
         Interesting: ${body.interested}\r\n
         Message: ${body.message}
     `
-    
-    const data = {
-        to: "v_juric@hotmail.com",
-        from: process.env.CUSTOMER_EMAIL,
-        cc: process.env.CUSTOMER_EMAIL,
-        subject: body.subject,
-        text: message,
-        html: message.replace(/\r\n/g, '<br>')
+    let testAccount = await nodemailer.createTestAccount();
+    console.log( process.env.CUSTOMER_EMAIL)
+    console.log( process.env.CUSTOMER_PASSWORD)
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: "gsgpm1018.siteground.biz/webmail/mail",
+        port: 465,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: process.env.CUSTOMER_EMAIL, // generated ethereal user
+            pass: process.env.CUSTOMER_PASSWORD, // generated ethereal password
+        },
+    });
+    console.log(transporter)
+    try {
+        let info = await transporter.sendMail({
+            from: `"Vinko" <${process.env.CUSTOMER_EMAIL}>`, // sender address
+            to: process.env.CUSTOMER_EMAIL, // list of receivers
+            subject: `New Consultation from ${body.email}`, // Subject line
+            text: message, // plain text body
+            html: message.replace(/\r\n/g, '<br>'), // html body
+        });
+        res.status(200).json({ status: "OK" })
+        
+    } catch (error) {
+        res.status(400).json({ status: error })
     }
 
-    try {
-        await mail.send(data)
-        res.status(200).json({ status: "OK" })
-    } catch (error) {
-        res.status(400).json({ status: "Error" })
-    }
-    
 }
