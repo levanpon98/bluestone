@@ -17,8 +17,11 @@ export default async (req, res) => {
     const body = JSON.parse(req.body)
 
     const message = `
-        Name: ${body.name}\r\n
+        First Name: ${body.firstname}\r\n
+        Last Name: ${body.lastname}\r\n
         Email: ${body.email}\r\n
+        Phone Number: ${body.phonenumber}\r\n
+        Interesting: ${body.interested}\r\n
         Message: ${body.message}
     `
     

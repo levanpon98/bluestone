@@ -8,10 +8,17 @@ const FooterContact = () => {
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
-        setModalVisible(false)
-        setModalSuccessVisible(true)
+    const onFinish = async (values) => {
+        const res = await fetch('/api/mail', {
+            method: 'post',
+            body: JSON.stringify(values)
+        })
+        if (res.status == 200) {
+            setModalVisible(false)
+            setModalSuccessVisible(true)
+        } else {
+            
+        }
     };
     return (
         <div
@@ -163,7 +170,6 @@ const FooterContact = () => {
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
                                     <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
                                 </Form.Item>
-
                             </div>
                             <div className="col-md-2 d-flex justify-content-end">
 

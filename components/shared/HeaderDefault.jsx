@@ -32,10 +32,18 @@ const HeaderDefault = () => {
         setModalVisible(true)
     }
 
-    const onFinish = (values) => {
-        console.log('Success:', values);
-        setModalVisible(false)
-        setModalSuccessVisible(true)
+    const onFinish = async (values) => {
+        const res = await fetch('/api/mail', {
+            method: 'post',
+            body: JSON.stringify(values)
+        })
+        if (res.status == 200) {
+            setModalVisible(false)
+            setModalSuccessVisible(true)
+        } else {
+            
+        }
+        
     };
     return (
         <header className="header" data-sticky="true" id="headerSticky">
