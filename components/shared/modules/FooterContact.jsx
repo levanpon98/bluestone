@@ -44,7 +44,7 @@ const FooterLinks = () => {
                                     <div className="circle">
                                         <i class="icon-envelope" aria-hidden="true"></i>
                                     </div>
-                                    <p>{results.mail}</p>
+                                    <p>{results.receive_email}</p>
                                 </li>
                                 <li>
                                     <div className="circle">
