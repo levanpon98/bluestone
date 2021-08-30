@@ -29,7 +29,7 @@ const FormChangeContact = ({ }) => {
             body: JSON.stringify(values)
         })
 
-        modalNotification('success', "Change Aboutus Successfully!!!", "")
+        modalNotification('success', "Change About Us Successfully!!!", "")
         
     };
 
