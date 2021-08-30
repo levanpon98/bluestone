@@ -1,5 +1,6 @@
 import { message } from 'antd'
 import { notification } from 'antd';
+import { TRUE } from 'node-sass';
 
 const nodemailer = require("nodemailer");
 const modalNotification = (type, message, desc) => {
@@ -27,8 +28,8 @@ export default async (req, res) => {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         host: "gsgpm1018.siteground.biz",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
             user: process.env.CUSTOMER_EMAIL, // generated ethereal user
             pass: process.env.CUSTOMER_PASSWORD, // generated ethereal password
