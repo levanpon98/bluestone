@@ -19,7 +19,7 @@ const FormChangeContact = ({ }) => {
         const res = await fetch('/api/aboutus')
         const json = await res.json()
         form.setFieldsValue({
-            aboutus: json.data.service_1,
+            aboutus: json.data.aboutus,
         });
     }
 
