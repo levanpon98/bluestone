@@ -22,9 +22,8 @@ export default async (req, res) => {
         Interesting: ${body.interested}\r\n
         Message: ${body.message}
     `
-    let testAccount = await nodemailer.createTestAccount();
-    console.log( process.env.CUSTOMER_EMAIL)
-    console.log( process.env.CUSTOMER_PASSWORD)
+
+
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         host: "gsgpm1018.siteground.biz",
@@ -34,18 +33,23 @@ export default async (req, res) => {
             user: process.env.CUSTOMER_EMAIL, // generated ethereal user
             pass: process.env.CUSTOMER_PASSWORD, // generated ethereal password
         },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false,
+        },
     });
-    console.log(transporter)
+
     try {
         let info = await transporter.sendMail({
-            from: `"Vinko" <${process.env.CUSTOMER_EMAIL}>`, // sender address
-            to: process.env.CUSTOMER_EMAIL, // list of receivers
+            from: `"Info" <${process.env.CUSTOMER_EMAIL}>`, // sender address
+            to: "vinko@bluestonebuyersagents.com.au", // list of receivers
             subject: `New Consultation from ${body.email}`, // Subject line
             text: message, // plain text body
             html: message.replace(/\r\n/g, '<br>'), // html body
         });
+        console.log(info)
         res.status(200).json({ status: "OK" })
-        
+
     } catch (error) {
         res.status(400).json({ status: error })
     }
