@@ -19,6 +19,11 @@ const UserInformation = ({  }) => {
             icon: 'icon-alarm-ringing',
             active: true,
         },
+        {
+            text: 'About Us',
+            url: '/admin/aboutus',
+            icon: 'icon-alarm-ringing',
+        },
     ];
     
     return (
