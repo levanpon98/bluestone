@@ -17,7 +17,7 @@
             .header__left {
                 .ps-logo {
                     img {
-                        max-width: 340px;
+                        max-width: 250px;
 
                         @include media('<sm') {
                             max-width: 200px;
@@ -41,7 +41,7 @@
                 .menu {
                     margin-bottom: 0;
                     a {
-                        font-size: 29px;
+                        font-size: 27px;
                         font-weight: normal;
                         font-stretch: normal;
                         font-style: normal;
@@ -63,7 +63,7 @@
                 .title{
                     padding-right: 29px;
                     color: #fff;
-                    font-size: 16px;
+                    font-size: 20px;
                 }
                 .header__right__list-icons {
                     display: flex;
@@ -130,7 +130,7 @@
                         margin-left: 20px;
                         color: #fff;
                         margin-bottom: 0;
-                        font-size: 24px;
+                        font-size: 17px;
                         text-align: left;
                         @include media('<md') { 
                             font-size: 20px;

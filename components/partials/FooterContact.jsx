@@ -25,7 +25,7 @@ const FooterContact = () => {
         <div
             className="ps-vendor-footer "
         >
-            <div className="ps-container">
+            <div className="">
                 <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <img src="/static/img/bg/vendor.jpg" className={'image'} />
