@@ -28,7 +28,7 @@ const StyleSheets = () => (
             rel="stylesheet"
             href="/static/fonts/font-awesome/css/font-awesome.min.css"
         />
-        
+
         <link
             rel="stylesheet"
             type="text/css"

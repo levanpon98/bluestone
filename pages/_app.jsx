@@ -24,7 +24,8 @@ function App({ Component, pageProps }) {
     const store = useStore();
     const getLayout = Component.getLayout || ((page) => <DefaultLayout children={page} />);
 
-    useEffect(() => {
+    useEffect(() => {      
+        document.body.style.zoom = 1.0
         setTimeout(function () {
             document.getElementById('__next').classList.add('loaded');
         }, 100);
