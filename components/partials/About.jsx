@@ -25,7 +25,7 @@ const VendorAbout = () => {
                 </div>
                 <div className="ps-section__content">
                     <div className="row">
-                        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 ">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
                             <div className="info-wrapper">
                                 <div className="info-wrapper__cover">
                                     <div className="img-back">
@@ -38,7 +38,7 @@ const VendorAbout = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
+                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 ">
                             <div className="ps-block__content">
                                 <p>
                                     {results.aboutus}

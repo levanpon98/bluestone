@@ -103,6 +103,31 @@
                 justify-content: flex-end;
                 align-items: center;
             }
+
+            .navigation-mobile {
+                display: none;
+            }
+        }
+
+        @include media('<sm') {
+            display:flex;
+            .ps-container {
+                width: 100% !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                padding: 0 40px;
+            }
+            .header__center {
+                display: none !important;
+            }
+            .header__right {
+                display: none !important;
+            }
+            .navigation-mobile {
+                text-align: right;
+                display: block !important;
+                cursor: pointer;
+            }
         }
     }
 
@@ -117,7 +142,7 @@
             padding-bottom: 15px;
 
             .header__left {
-                min-width: 300px;
+                text-align: left;
             }
 
             > * {
@@ -144,6 +169,10 @@
                     margin-left: 10px;
                 }
             }
+        }
+
+        @include media('<sm') {
+            display: none;
         }
     }
 
@@ -173,42 +202,32 @@
     }
 
     @include media('<lg') {
-        .header__right{
-            max-width: 1000px;
-            justify-content: center !important;
-        }
+       
         
     }
     @include media('<md') {
-        .header__contact{
-            .ps-container{
-                flex-flow: column;
-                .header__center {
-                    display: none;
-                }
-            }
-        }
-       
         .ps-container{
             justify-content: center;
         }
-        .header__left {
-            display: flex;
-            justify-content: center;
-        }
-
-        .ps-container > .header__center {
-            margin-top: 10px;
-            justify-content: center !important;
-            text-align: center !important;
-        }
+      
 
         .header__top > .ps-container {
-            flex-flow: column;
+            img {
+                max-width: 150px !important;
+            }
+
+            button.ps-btn {
+                font-size: 1em;
+                padding: 5px 30px;
+            }
+
+            .header__right {
+                max-width: 150px;
+            }
         }
 
         .header__left {
-            max-width: 1000px !important;
+            max-width: 150px !important;
         }
     }
 }

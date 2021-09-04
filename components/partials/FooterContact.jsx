@@ -27,13 +27,13 @@ const FooterContact = () => {
         >
             <div className="">
                 <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12 vendor-footer__right">
                         <img src="/static/img/bg/vendor.jpg" className={'image'} />
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 vendor-footer__left">
+                    <div className="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12 vendor-footer__left">
                         <div className="title">
                             <p>
-                                Always Find The Property <br />You're Looking For
+                                Always <br /> Find The Property <br />You're Looking For
                             </p>
                         </div>
                         <div className="button">
@@ -159,14 +159,15 @@ const FooterContact = () => {
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please input your interesting!',
                                         },
                                     ]}
                                 >
                                     <Select >
-                                        <Option key="Buyers Agents">Buyers Agents</Option>
-                                        <Option key="Property Management">Property Management</Option>
-                                        <Option key="Vendor Avocacy">Vendor Avocacy</Option>
+                                        <Option key="Purchasing a first home">Purchasing a first home</Option>
+                                        <Option key="Purchasing an investment">Purchasing an investment</Option>
+                                        <Option key="Purchasing a commercial property">Purchasing a commercial property</Option>
+                                        <Option key="SMSF investment">SMSF investment</Option>
+                                        <Option key="Other">Other</Option>
                                     </Select>
                                 </Form.Item>
                             </div>
@@ -174,7 +175,7 @@ const FooterContact = () => {
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
-                                    <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
+                                    <Checkbox >Keep me informed on good property deals</Checkbox>
                                 </Form.Item>
                             </div>
                             <div className="col-md-2 d-flex justify-content-end">

@@ -207,9 +207,11 @@ const HomeDefaultBanner = () => {
                                     ]}
                                 >
                                     <Select >
-                                        <Option key="Buyers Agents">Buyers Agents</Option>
-                                        <Option key="Property Management">Property Management</Option>
-                                        <Option key="Vendor Avocacy">Vendor Avocacy</Option>
+                                    <Option key="Purchasing a first home">Purchasing a first home</Option>
+                                        <Option key="Purchasing an investment">Purchasing an investment</Option>
+                                        <Option key="Purchasing a commercial property">Purchasing a commercial property</Option>
+                                        <Option key="SMSF investment">SMSF investment</Option>
+                                        <Option key="Other">Other</Option>
                                     </Select>
                                 </Form.Item>
                             </div>
@@ -226,7 +228,7 @@ const HomeDefaultBanner = () => {
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
-                                    <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
+                                <Checkbox >Keep me informed on good property deals</Checkbox>
                                 </Form.Item>
 
                             </div>

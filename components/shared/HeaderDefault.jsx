@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Logo from '~/components/elements/Logo';
 import { stickyHeader } from '~/utilities/common-helpers';
 import NavigationDefault from './NavigationDefault'
-import { Modal, Button, Form, Input, Select, Checkbox } from 'antd';
+import { Modal, Button, Form, Input, Select, Checkbox, Drawer } from 'antd';
 import Recaptcha from 'react-google-invisible-recaptcha';
 const { TextArea } = Input;
 const { Option } = Select;
@@ -12,7 +12,7 @@ const HeaderDefault = () => {
     const [results, setResults] = useState({});
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
-
+    const [menuDrawer, setMenuDrawer] = useState(false)
     const getContact = async () => {
         const res = await fetch('/api/contact')
         const json = await res.json()
@@ -33,6 +33,9 @@ const HeaderDefault = () => {
         setModalVisible(true)
     }
 
+    const handleShowMenuDrawer = () => {
+        setMenuDrawer(!menuDrawer)
+    }
     const onFinish = async (values) => {
         const res = await fetch('/api/mail', {
             method: 'post',
@@ -48,6 +51,62 @@ const HeaderDefault = () => {
     };
     return (
         <header className="header" data-sticky="true" id="headerSticky">
+            <Drawer
+                className="ps-panel--mobile"
+                placement="right"
+                closable={false}
+                onClose={handleShowMenuDrawer}
+                visible={menuDrawer}>
+                <div className="ps-panel--wrapper">
+                    <span
+                        className="ps-panel__close"
+                        onClick={handleShowMenuDrawer}>
+                        <i className="icon-cross"></i>
+                    </span>
+                    <div className="ps-panel__content">
+                        <div>
+                            <div className="panel-menu">
+                                <NavigationDefault />
+                            </div>
+                            <div className="social">
+                                <div className="follow">
+                                    <a href={results.instagram} className="header__right__list-icons">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href={results.facebook} className="header__right__list-icons">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                    <a href={results.linkedin} className="header__right__list-icons">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div className="contact">
+                                    <ul>
+                                        <li>
+                                            <div className="circle">
+                                                <i class="icon-telephone" aria-hidden="true"></i>
+                                            </div>
+                                            <p>{results.phone}</p>
+                                        </li>
+                                        <li>
+                                            <div className="circle">
+                                                <i class="icon-envelope" aria-hidden="true"></i>
+                                            </div>
+                                            <p>{results.receive_email}</p>
+                                        </li>
+                                        <li>
+                                            <div className="circle">
+                                                <i class="icon-map-marker" aria-hidden="true"></i>
+                                            </div>
+                                            <p>{results.address}</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Drawer>
             <div className="header-wrapper">
                 <div className="content">
                     <div className="header__contact">
@@ -89,6 +148,9 @@ const HeaderDefault = () => {
                                 <button className="ps-btn" onClick={handleButtonClick}>
                                     Contact Us
                                 </button>
+                            </div>
+                            <div className="navigation-mobile" onClick={handleShowMenuDrawer}>
+                                <img src="/static/img/icons/menu icon.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -212,9 +274,11 @@ const HeaderDefault = () => {
                                     ]}
                                 >
                                     <Select >
-                                        <Option key="Buyers Agents">Buyers Agents</Option>
-                                        <Option key="Property Management">Property Management</Option>
-                                        <Option key="Vendor Avocacy">Vendor Avocacy</Option>
+                                        <Option key="Purchasing a first home">Purchasing a first home</Option>
+                                        <Option key="Purchasing an investment">Purchasing an investment</Option>
+                                        <Option key="Purchasing a commercial property">Purchasing a commercial property</Option>
+                                        <Option key="SMSF investment">SMSF investment</Option>
+                                        <Option key="Other">Other</Option>
                                     </Select>
                                 </Form.Item>
                             </div>
@@ -222,7 +286,7 @@ const HeaderDefault = () => {
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
-                                    <Checkbox >Yes please, subscribe me to weekly property market intelligence and insights.</Checkbox>
+                                    <Checkbox >Keep me informed on good property deals</Checkbox>
                                 </Form.Item>
 
                             </div>

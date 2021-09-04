@@ -16,7 +16,7 @@ const VendorAbout = () => {
     return (
         <div
             className="ps-vendor-banner bg--cover"
-            style={{ background: "url('/static/img/bg/71d0bfbcda5f2d01744e.jpg')" }}
+            style={{ backgroundImage: "url('/static/img/bg/71d0bfbcda5f2d01744e.jpg')" }}
         >
             <div className="ps-container">
                 <div className="ps-section__header">
@@ -26,11 +26,10 @@ const VendorAbout = () => {
                 </div>
                 <div className="ps-section__content">
                     <div className="row">
-                        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 pr-20 pl-20 card-item">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pr-20 pl-20 card-item">
                             <div className="ps-block--icon-box-2">
                                 <div className="ps-block__thumbnail">
-                                    {/* <img src="/static/img/icons/vendor-1.png" alt="hmsp" /> */}
-                                    <i className="icon-home5 icon"></i>
+                                    <img src="/static/img/icons/Property buyer's icon web.png" alt="hmsp" />
                                 </div>
 
                                 <div className="ps-block__content">
@@ -46,10 +45,10 @@ const VendorAbout = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 pr-20 pl-20 card-item">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pr-20 pl-20 card-item">
                             <div className="ps-block--icon-box-2">
                                 <div className="ps-block__thumbnail">
-                                    <i className="icon-balance icon"></i>
+                                    <img src="/static/img/icons/Vendor advocacy icon web.png" alt="hmsp" />
                                 </div>
 
                                 <div className="ps-block__content">
@@ -66,10 +65,10 @@ const VendorAbout = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 pr-20 pl-20 card-item">
+                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 pr-20 pl-20 card-item">
                             <div className="ps-block--icon-box-2">
                                 <div className="ps-block__thumbnail">
-                                    <i className="icon-trophy icon"></i>
+                                    <img src="/static/img/icons/PROPERTY MANAGEMENT icon web.png" alt="hmsp" />
                                 </div>
 
                                 <div className="ps-block__content">

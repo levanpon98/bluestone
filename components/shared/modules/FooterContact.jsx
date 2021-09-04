@@ -29,9 +29,8 @@ const FooterLinks = () => {
     ))
     return (
         <div className="ps-footer__links">
-            <div className="ps-container">
                 <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <div className="contact">
                             <ul>
                                 <li>
@@ -55,7 +54,7 @@ const FooterLinks = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <MyMapComponent
                             isMarkerShown
                             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
@@ -65,7 +64,7 @@ const FooterLinks = () => {
                         />
                     </div>
                 </div>
-            </div>
+       
         </div>
     )
 };
