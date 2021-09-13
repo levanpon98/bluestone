@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { compose } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
@@ -18,53 +18,40 @@ const FooterLinks = () => {
         getContact()
     }, [])
 
-    const MyMapComponent = withScriptjs(withGoogleMap((props) =>
-        <GoogleMap
-            defaultZoom={4}
-            defaultCenter={{ lat: -34.397, lng: 150.644 }}
-        >
-            {<Marker position={ { lat: -34.397, lng: 150.644 }} onClick={()=> {console.log('111111111')}} />}
-            {<Marker position={ { lat: -34.397, lng: 140.644 }} onClick={()=> {console.log('22222222')}}/>}
-        </GoogleMap>
-    ))
     return (
         <div className="ps-footer__links">
-                <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <div className="contact">
-                            <ul>
-                                <li>
-                                    <div className="circle">
-                                        <i class="icon-telephone" aria-hidden="true"></i>
-                                    </div>
-                                    <p>{results.phone}</p>
-                                </li>
-                                <li>    
-                                    <div className="circle">
-                                        <i class="icon-envelope" aria-hidden="true"></i>
-                                    </div>
-                                    <p>{results.receive_email}</p>
-                                </li>
-                                <li>
-                                    <div className="circle">
-                                        <i class="icon-map-marker" aria-hidden="true"></i>
-                                    </div>
-                                    <p>{results.address}</p>
-                                </li>
-                            </ul>
-                        </div>
+            <div className="ps-container">
+                <div className="header__left">
+                    <div className="circle">
+                        <i class="icon-telephone" aria-hidden="true"></i>
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                        <MyMapComponent
-                            isMarkerShown
-                            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-                            loadingElement={<div style={{ height: `100%` }} />}
-                            containerElement={<div style={{ height: `200px` }} />}
-                            mapElement={<div style={{ height: `100%` }} />}
-                        />
+                    <p>{results.phone}</p>
+                </div>
+                <div className="header__center">
+                    <div className="circle">
+                        <i class="icon-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>{results.receive_email}</p>
+                </div>
+                <div className="header__right">
+                    <div className="follow">
+                        <div className="title">
+                            Follow Us
+                        </div>
+                        <a href={results.instagram} className="header__right__list-icons">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href={results.facebook} className="header__right__list-icons">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href={results.linkedin} className="header__right__list-icons">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-       
+
+            </div>
+
         </div>
     )
 };

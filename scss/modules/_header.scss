@@ -74,8 +74,7 @@
 
     .header__top {
         padding: 15px 0;
-        background-color: #12192a;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        background-color: #051632;
 
         .ps-container, .container {
             display: flex;
@@ -134,15 +133,18 @@
     .header__contact {
         background-color: #f4f5f5;
         .ps-container {
-            font-size: 15px;
+            font-size: 22px;
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
             padding-top: 15px;
             padding-bottom: 15px;
-
+            justify-content: space-between;
+            color: #090A1C;
+            font-weight: 600;
             .header__left {
                 text-align: left;
+                font-weight: 600;
             }
 
             > * {
@@ -154,7 +156,8 @@
                 align-items: center;
                 justify-content: flex-end;
                 .title{
-                    padding-right: 20px;
+                    padding-right: 5px;
+                    font-weight: 600;
                 }
                 .header__right__list-icons {
                     display: flex;

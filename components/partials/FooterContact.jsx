@@ -27,13 +27,13 @@ const FooterContact = () => {
         >
             <div className="">
                 <div className="row">
-                    <div className="col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12 vendor-footer__right">
+                    <div className="col-xl-7 col-lg-8 col-md-7 col-sm-12 col-12 vendor-footer__right">
                         <img src="/static/img/bg/vendor.jpg" className={'image'} />
                     </div>
-                    <div className="col-xl-3 col-lg-4 col-md-5 col-sm-12 col-12 vendor-footer__left">
+                    <div className="col-xl-5 col-lg-4 col-md-5 col-sm-12 col-12 vendor-footer__left">
                         <div className="title">
                             <p>
-                                Always <br /> Find The Property <br />You're Looking For
+                            Let us <br /> find the property <br /> you're looking for
                             </p>
                         </div>
                         <div className="button">

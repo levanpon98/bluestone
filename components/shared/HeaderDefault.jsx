@@ -47,7 +47,6 @@ const HeaderDefault = () => {
         } else {
 
         }
-
     };
     return (
         <header className="header" data-sticky="true" id="headerSticky">
@@ -115,9 +114,9 @@ const HeaderDefault = () => {
                             <div className="header__left">
                                 Tel {results.phone}
                             </div>
-                            <div className="header__center">
+                            {/* <div className="header__center">
                                 Address {results.address}
-                            </div>
+                            </div> */}
                             <div className="header__right">
                                 <div className="title">
                                     Follow Us

@@ -13,6 +13,7 @@ const FooterWidgets = () => {
     const [results, setResults] = useState({});
     const [modalVisible, setModalVisible] = useState(false)
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
+    const [menuDrawer, setMenuDrawer] = useState(false)
     const getContact = async () => {
         const res = await fetch('/api/contact')
         const json = await res.json()
@@ -23,10 +24,14 @@ const FooterWidgets = () => {
         getContact()
     }, [])
 
+
     const handleButtonClick = () => {
         setModalVisible(true)
     }
 
+    const handleShowMenuDrawer = () => {
+        setMenuDrawer(!menuDrawer)
+    }
     const onFinish = async (values) => {
         const res = await fetch('/api/mail', {
             method: 'post',
@@ -38,41 +43,14 @@ const FooterWidgets = () => {
         } else {
 
         }
-
     };
 
     return (
         <div className="ps-footer__widgets">
             <div className="ps-container">
-                <div className="header__left">
-                    <Logo />
-                    {/* <MenuCategoriesDropdown /> */}
-                </div>
-                <div className="header__center">
-                    {/* <SearchHeader /> */}
-                    <NavigationDefault />
-                </div>
-                <div className="header__right">
-                    <div className="follow">
-                        <div className="title">
-                            Follow Us
-                        </div>
-                        <a href={results.instagram} className="header__right__list-icons">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href={results.facebook} className="header__right__list-icons">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href={results.linkedin} className="header__right__list-icons">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <button className="ps-btn" onClick={handleButtonClick}>
-                        Contact Us
-                    </button>
-                </div>
+                <button class="ps-btn" onClick={handleButtonClick}>Contact Us</button>
             </div>
+
             <Modal
                 centered
                 visible={modalVisible}

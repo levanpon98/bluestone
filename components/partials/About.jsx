@@ -15,7 +15,6 @@ const VendorAbout = () => {
     return (
         <div
             className="ps-vendor-about bg--cover"
-            style={{ backgroundImage: "url('/static/img/bg/Artboard13.png')" }}
         >
             <div className="ps-container">
                 <div className="ps-section__header">
@@ -24,27 +23,30 @@ const VendorAbout = () => {
                     </h4>
                 </div>
                 <div className="ps-section__content">
-                    <div className="row">
-                        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 ">
-                            <div className="info-wrapper">
-                                <div className="info-wrapper__cover">
-                                    <div className="img-back">
-                                        <img src="/static/img/users/18-3-1_2048x2048.jpg" alt="" />
-                                    </div>
+                    <div className="ps-block--aboutus">
+                        <div className="ps-block__thumbnail">
+                            <img src="/static/img/users/18-3-1_2048x2048.jpg" alt="" />
+                        </div>
+
+                        <div className="ps-block__content">
+                            <div className="ps-block__content-top">
+                                <div className="title">
+                                    Vinko Juric
                                 </div>
-                                <div className="info-wrapper__name">
-                                    <h4>Vinko Juric</h4>
-                                    <p>Director</p>
+                                <div className="position">
+                                    Director
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12 ">
-                            <div className="ps-block__content">
-                                <p>
-                                    {results.aboutus}
-                                </p>
+                            <div className="ps-block__content-bottom">
+                                {results.aboutus}
                             </div>
                         </div>
+                    </div>
+                    <div className="mt-70 mb-70">
+                        <img src="/static/img/icons/Scroll Group 4.png" alt="" width="100%" />
+                    </div>
+                    <div className="mt-70 mb-70 title-aboutus" >
+                        His love for the property market in SA continued to grow and six months later he purchased a rare 3-bedroom unit near the Flinders Medical University. This renter's dream became Vinko’s first renovation project and is now a modern furnished apartment returning $40k.
                     </div>
                 </div>
             </div>
