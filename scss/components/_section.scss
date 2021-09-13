@@ -1355,7 +1355,7 @@
 
     .ps-section__content {
         padding-bottom: 320px;
-        max-width: calc((((1550px -80px) / 6) * 4) + 80px) ;
+        max-width: calc((((1550px  + 120px) / 6) * 4) + 80px) ;
 
         .ps-block--aboutus {
             .ps-block__thumbnail {
@@ -1484,7 +1484,7 @@
     .ps-section__content {
         padding-bottom: 110px;
         margin-top: -325px;
-        max-width: calc((((1550px -80px) / 6) * 4) + 80px) ;
+        max-width: calc((((1550px + 120px) / 6) * 4) + 80px) ;
         .image-top {
             img {
                 max-height: 650px;
