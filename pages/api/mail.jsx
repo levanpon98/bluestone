@@ -27,16 +27,16 @@ export default async (req, res) => {
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
         host: "gsgpm1018.siteground.biz",
-        port: 567,
-        secure: false, // true for 465, false for other ports
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
             user: process.env.CUSTOMER_EMAIL, // generated ethereal user
             pass: process.env.CUSTOMER_PASSWORD, // generated ethereal password
         },
-        tls: {
-            // do not fail on invalid certs
-            rejectUnauthorized: false,
-        },
+        // tls: {
+        //     // do not fail on invalid certs
+        //     rejectUnauthorized: false,
+        // },
     });
 
     try {
@@ -47,7 +47,6 @@ export default async (req, res) => {
             text: message, // plain text body
             html: message.replace(/\r\n/g, '<br>'), // html body
         });
-        console.log(info)
         res.status(200).json({ status: "OK" })
 
     } catch (error) {
