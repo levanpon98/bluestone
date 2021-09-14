@@ -705,6 +705,30 @@
 
         
     }
+
+    @include media('<phone') {
+        .ant-modal-footer {
+            .ant-footer__custom {
+                font-size: 21px;
+            }
+        }
+        .btn-inside {
+            display: none;
+        }
+        .btn-outside {
+            margin-top: 15px;
+            display: block;
+            width: 100%;
+        }
+        .ant-modal-body { 
+            .ant-checkbox-wrapper {
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+        
+    }
 }
 .modal-success {
     .ant-modal-content {

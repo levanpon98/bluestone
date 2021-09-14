@@ -78,7 +78,7 @@ const HomeDefaultBanner = () => {
 
         }
     };
-    
+
 
     return (
         <div className="ps-home-banner ps-home-banner--1">
@@ -93,7 +93,6 @@ const HomeDefaultBanner = () => {
                         </button>
                     </div>
                 </div>
-
             </div>
 
             <Modal
@@ -113,8 +112,9 @@ const HomeDefaultBanner = () => {
                     <h2>Contact Us</h2>
                     <p>Fill out the form and we'll be in touch as soon as possible</p>
                 </div>
-                <div className="form">
-                    <Form layout="vertical" onFinish={onFinish}>
+                <Form layout="vertical" onFinish={onFinish}>
+                    <div className="form">
+
                         <div className="row">
                             <div className="col-md-6">
                                 <Form.Item
@@ -207,7 +207,7 @@ const HomeDefaultBanner = () => {
                                     ]}
                                 >
                                     <Select >
-                                    <Option key="Purchasing a first home">Purchasing a first home</Option>
+                                        <Option key="Purchasing a first home">Purchasing a first home</Option>
                                         <Option key="Purchasing an investment">Purchasing an investment</Option>
                                         <Option key="Purchasing a commercial property">Purchasing a commercial property</Option>
                                         <Option key="SMSF investment">SMSF investment</Option>
@@ -221,28 +221,33 @@ const HomeDefaultBanner = () => {
                                 <Recaptcha
                                     sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
                                     ref={reRef}
-                                    onResolved={ () => console.log( 'Human detected.' ) }
+                                    onResolved={() => console.log('Human detected.')}
                                 />
                             </div>
                         </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
-                                <Checkbox >Keep me informed on good property deals</Checkbox>
+                                    <Checkbox >Keep me informed on good property deals</Checkbox>
                                 </Form.Item>
 
                             </div>
                             <div className="col-md-2 d-flex justify-content-end">
 
-                                <button className="ps-btn" type="submit" >
+                                <button className="ps-btn btn-inside" type="submit" >
                                     Submit
                                 </button>
                             </div>
                         </div>
 
-                    </Form>
-                </div>
+
+                    </div>
+                    <button className="ps-btn btn-outside" type="submit" >
+                        Submit
+                    </button>
+                </Form>
             </Modal>
+            
             <Modal
                 centered
                 visible={modalSuccessVisible}

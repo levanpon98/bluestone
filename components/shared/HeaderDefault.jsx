@@ -73,10 +73,13 @@ const HeaderDefault = () => {
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
                                     <a href={results.facebook} className="header__right__list-icons">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a href={results.facebook} className="header__right__list-icons">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                                     <a href={results.linkedin} className="header__right__list-icons">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        <i class="fa fa-globe" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div className="contact">

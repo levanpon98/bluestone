@@ -65,13 +65,9 @@ const FooterContact = () => {
                     <h2>Contact Us</h2>
                     <p>Fill out the form and we'll be in touch as soon as possible</p>
                 </div>
-                <div className="form">
-                    <Form layout="vertical" onFinish={onFinish}>
-                        <Recaptcha
-                            sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
-                            ref={reRef}
-                            onResolved={() => console.log('Human detected.')}
-                        />
+                <Form layout="vertical" onFinish={onFinish}>
+                    <div className="form">
+
                         <div className="row">
                             <div className="col-md-6">
                                 <Form.Item
@@ -159,6 +155,7 @@ const FooterContact = () => {
                                     rules={[
                                         {
                                             required: true,
+                                            message: 'Please input your interesting!',
                                         },
                                     ]}
                                 >
@@ -172,21 +169,36 @@ const FooterContact = () => {
                                 </Form.Item>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <Recaptcha
+                                    sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
+                                    ref={reRef}
+                                    onResolved={() => console.log('Human detected.')}
+                                />
+                            </div>
+                        </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
                                     <Checkbox >Keep me informed on good property deals</Checkbox>
                                 </Form.Item>
+
                             </div>
                             <div className="col-md-2 d-flex justify-content-end">
 
-                                <button className="ps-btn" type="submit" >
+                                <button className="ps-btn btn-inside" type="submit" >
                                     Submit
                                 </button>
                             </div>
                         </div>
-                    </Form>
-                </div>
+
+
+                    </div>
+                    <button className="ps-btn btn-outside" type="submit" >
+                        Submit
+                    </button>
+                </Form>
             </Modal>
             <Modal
                 centered

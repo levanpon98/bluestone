@@ -1,6 +1,6 @@
 .ps-footer {
     padding-top: 70px;
-    border-top: 2px solid #e1e1e1;
+    // border-top: 0.5px solid #fff;
     background-color: #12192a;
 
     &__widgets {
@@ -21,14 +21,12 @@
                 font-weight: 600;
                 border-radius: 40px;
             }
-
-            
-
-
         }
+
         .mobile {
             display: none;
         }
+
         @include media('<md') {
             .ps-container {
                 display: flex;
@@ -112,31 +110,12 @@
                 }
 
                 .header__center {
-                    .menu {
-                        flex-direction: column;
+                    display: none;
 
-                        a {
-                            padding: 10px 15px !important;
-                            font-size: 24px !important;
-                        }
-                    }
                 }
 
                 .header__right {
-                    display: flex;
-                    justify-content: center;
-
-                    .follow {
-                        display: none !important;
-                    }
-
-                    .ps-btn {
-                        display: block;
-                        padding: 15px 60px;
-                        font-size: 20px;
-                        font-weight: 600;
-                        border-radius: 40px;
-                    }
+                    display: none;
                 }
             }
 
@@ -156,12 +135,6 @@
             justify-content: center;
             display: flex;
             margin-right: 20px;
-
-            @include media('<md') {
-                width: 18px;
-                height: 18px;
-                font-size: 12px;
-            }
         }
 
         .ps-container {
@@ -232,16 +205,32 @@
                     font-size: 20px;
                     margin-left: 10px;
 
-                    @include media('<md') {
-                        width: 18px;
-                        height: 18px;
-                        font-size: 12px;
-                    }
+                 
                 }
             }
         }
+
         @include media("<phone") {
-            display: none;
+            .ps-container {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 0;
+
+                .header__left {
+                    padding: 10px 0;
+                    justify-content: left;
+                }
+
+                .header__center {
+                    padding: 10px 0;
+                    justify-content: left;
+                }
+
+                .header__right {
+                    padding: 50px 0;
+                }
+            }
         }
     }
 
@@ -250,9 +239,11 @@
         display: flex;
         flex-flow: column;
         border-top: 1px solid #e1e1e1;
+
         .last {
             font-weight: 600;
         }
+
         p {
             margin-bottom: 0;
             line-height: 30px;
@@ -276,6 +267,15 @@
 
         @include media('<phone') {
             padding: 20px 0;
+
+            p {
+                font-size: 1em;
+            }
+
+            .last {
+                padding: 10px 0;
+                font-size: 1.1em;
+            }
         }
     }
 
