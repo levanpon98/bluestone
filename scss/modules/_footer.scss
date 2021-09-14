@@ -274,9 +274,6 @@
 
         @include media('<phone') {
             padding: 20px 0;
-            .last {
-                display: none;
-            }
         }
     }
 
