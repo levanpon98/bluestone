@@ -64,13 +64,13 @@ const FooterWidgets = () => {
                         <div className="title">
                             Follow Us
                         </div>
-                        <a href={results.instagram} className="header__right__list-icons">
+                        <a href={results.instagram} target="_blank" className="header__right__list-icons">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href={results.facebook} className="header__right__list-icons">
+                        <a href={results.facebook} target="_blank" className="header__right__list-icons">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
-                        <a href={results.linkedin} className="header__right__list-icons">
+                        <a href={results.linkedin} target="_blank" className="header__right__list-icons">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </div>

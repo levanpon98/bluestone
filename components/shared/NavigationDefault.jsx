@@ -35,7 +35,7 @@ class NavigationDefault extends Component {
                 </li>
                 <li>
                     <Link to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
-                        <a >
+                        <a  >
                             About Us
                         </a>
                     </Link>
