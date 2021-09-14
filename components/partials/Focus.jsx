@@ -25,40 +25,40 @@ const VendorAbout = () => {
                 </div>
                 <div className="ps-section__content">
                     <div className="row">
-                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                             <div className="focus-item">
                                 <div className="focus-item__icon">
-                                    <img src="/static/img/icons/Group 211.png" alt=""  height="130"/>
+                                    <img src="/static/img/icons/Group 211.png" alt="" />
                                 </div>
                                 <div className="focus-item__title">
                                     RESIDENTIAL PROPERTY
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                             <div className="focus-item">
                                 <div className="focus-item__icon">
-                                    <img src="/static/img/icons/CP - icon.png" alt=""  height="130"/>
+                                    <img src="/static/img/icons/CP - icon.png" alt=""  />
                                 </div>
                                 <div className="focus-item__title">
                                 COMMERCIAL PROPERTY
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                             <div className="focus-item">
                                 <div className="focus-item__icon">
-                                    <img src="/static/img/icons/Invest icon.png" alt="" height="130"/>
+                                    <img src="/static/img/icons/Invest icon.png" alt="" />
                                 </div>
                                 <div className="focus-item__title">
                                 INVESTMENT PROPERTY
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
                             <div className="focus-item">
                                 <div className="focus-item__icon">
-                                    <img src="/static/img/icons/renovate icon.png" alt=""height="130"/>
+                                    <img src="/static/img/icons/renovate icon.png" alt=""/>
                                 </div>
                                 <div className="focus-item__title">
                                 RENOVATE AND FLIP

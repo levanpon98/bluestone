@@ -22,9 +22,125 @@
                 border-radius: 40px;
             }
 
+            .mobile {
+                display: none;
+            }
+
 
         }
 
+        @include media('<md') {
+            .ps-container {
+                display: flex;
+                padding: 0;
+
+                .header__left {
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+
+                    img {
+                        max-width: 110px !important;
+                    }
+                }
+
+                .header__center {
+                    justify-content: center;
+
+                    ul {
+                        padding: 0;
+
+                        li>a {
+
+                            padding: 5px 5px !important;
+
+                            >a {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+
+                    .menu {
+                        display: flex;
+                        align-items: center;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            padding: 5px 5px !important;
+                        }
+                    }
+                }
+
+                .header__right {
+                    width: 100%;
+                    max-width: 1000px;
+                    justify-content: center;
+
+                    .title {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+
+        @include media('<phone') {
+            .mobile {
+                display: block;
+            }
+
+            .button {
+                display: none;
+            }
+
+            .ps-container,
+            .container {
+                flex-flow: column nowrap;
+
+                .header__left {
+                    display: flex;
+                    justify-content: center;
+
+                    .ps-logo {
+                        img {
+                            @include media('<sm') {
+                                max-width: 200px !important;
+                            }
+
+                        }
+                    }
+                }
+
+                .header__center {
+                    .menu {
+                        flex-direction: column;
+
+                        a {
+                            padding: 10px 15px !important;
+                            font-size: 24px !important;
+                        }
+                    }
+                }
+
+                .header__right {
+                    display: flex;
+                    justify-content: center;
+
+                    .follow {
+                        display: none !important;
+                    }
+
+                    .ps-btn {
+                        display: block;
+                        padding: 15px 60px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border-radius: 40px;
+                    }
+                }
+            }
+
+        }
     }
 
     &__links {
@@ -40,20 +156,24 @@
             justify-content: center;
             display: flex;
             margin-right: 20px;
+
             @include media('<md') {
                 width: 18px;
                 height: 18px;
-                font-size: 12px;    
+                font-size: 12px;
             }
         }
+
         .ps-container {
             display: flex;
             justify-content: space-between;
             padding: 0 0 50px 0;
+
             .header__left {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 p {
                     margin: 0;
                     font-size: 1.4em;
@@ -65,12 +185,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 p {
                     margin: 0;
                     font-size: 1.4em;
                     color: #fff;
                 }
-                
+
             }
 
             .header__right {
@@ -119,7 +240,9 @@
                 }
             }
         }
-
+        @include media("<phone") {
+            display: none;
+        }
     }
 
     &__copyright {
@@ -149,8 +272,11 @@
             }
         }
 
-        @include media('<sm') {
+        @include media('<phone') {
             padding: 20px 0;
+            .last {
+                display: none;
+            }
         }
     }
 

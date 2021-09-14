@@ -1285,7 +1285,7 @@
         @include media('<sm') {
             .card-item {
                 padding: 0 50px 0 50px;
-                margin-bottom: 75px;
+                margin-bottom: 115px;
             }
         }
 
@@ -1415,15 +1415,14 @@
             }
         }
 
-        @include media('<sm') {}
-
-        @include media('<xs') {
-            padding: 50px 0 50px 0;
+        @include media('<phone') {
+            padding: 55px 0 110px 0;
 
             h4 {
                 font-size: 40px;
             }
         }
+
     }
 
     h2 {
@@ -1461,9 +1460,58 @@
         }
     }
 
-    @include media('<sm') {
+    @include media('<phone') {
+        .ps-container {
+            padding: 0 40px;
+        }
         .ps-btn {
             font-size: 16px;
+        }
+
+        .ps-section__content {
+            padding-bottom: 120px;
+    
+            .ps-block--aboutus {
+                .ps-block__thumbnail {
+                    width: 300px;
+                    right: calc(50% - 300px);
+
+                    img {
+                        border-radius: 20px;
+                        height: 120px;
+                        width: 120px;
+                    }
+                }
+                .ps-block__content {
+                    margin-top: 70px;
+                    padding: 0 30px 60px 30px;
+                    .ps-block__content-top {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        .title{
+                            color: #fff;
+                            font-size: 26px;
+                        }
+                        .position {
+                            color: #FD8833;
+                            font-size: 16px;
+                        }
+                    }
+                    .ps-block__content-bottom {
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                    
+                }
+            }
+            .title-aboutus {
+                font-size: 16px;
+            }
+    
+            img {
+                height: 250px;
+            }
         }
     }
 
@@ -1494,6 +1542,27 @@
             font-size: 30px;
             color: #fff;
 
+        }
+    }
+
+    @include media('<phone') {
+        .ps-container {
+            padding: 0 40px;
+        }
+        .ps-section__content {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 0;
+            .image-top {
+                img {
+                    height: 250px;
+                }
+            }
+            .title-aboutus {
+                font-size: 16px;
+                color: #fff;
+    
+            }
         }
     }
 
@@ -1535,6 +1604,44 @@
 
         }
     }
+
+    @include media('<phone') {
+        .ps-container {
+            padding: 0 40px;
+        }
+        .ps-section__header {
+            padding: 100px 0 0 0;
+    
+            p {
+                color: #051632;
+                font-size: 16px;
+            }
+    
+            h4 {
+                color: #051632;
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .ps-section__content {
+
+            padding-bottom: 70px;
+    
+            .title {
+                font-size: 30px;
+                color:#FD8833;
+                font-weight: 600;
+                margin: 40px 0 !important;
+            }
+    
+            .title-aboutus {
+                font-size: 16px;
+                color: #051632;
+    
+            }
+        }
+    }
 }
 
 .ps-vendor-testimonials {
@@ -1572,6 +1679,27 @@
 
         }
     }
+
+    @include media('<phone') {
+        .ps-container {
+            padding: 0 40px;
+        }
+        
+        .ps-section__header {
+            padding: 70px 0;
+    
+            h4 {
+                color: #051632;
+                font-size: 40px;
+            }
+        }
+
+        .ps-section__content {
+
+            padding-bottom: 50px;
+        }
+    
+    }
 }
 
 .ps-vendor-focus {
@@ -1599,11 +1727,41 @@
 
         .focus-item {
             padding: 0 60px;
+            .focus-item__icon {
+                img {
+                    height: 130px;
+                }
+            }
             .focus-item__title {
                 margin-top: 30px;
                 color: #090A1C;
                 font-size: 2.3em;
                 font-weight: 600;
+            }
+        }
+    }
+
+    @include media('<sm') {
+
+        .ps-section__header {
+            padding: 60px 0 40px 0;
+            h4 {
+                color: #051632;
+                font-size: 40px;
+            }
+        }
+        .ps-section__content {
+            padding-bottom: 60px;
+            .focus-item {
+                padding: 20px 20px;
+                .focus-item__icon {
+                    img {
+                        height: 70px;
+                    }
+                }
+                .focus-item__title {
+                    font-size: 20px;
+                }
             }
         }
     }

@@ -49,9 +49,7 @@ const FooterLinks = () => {
                         </a>
                     </div>
                 </div>
-
             </div>
-
         </div>
     )
 };

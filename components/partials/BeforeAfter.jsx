@@ -28,7 +28,7 @@ const VendorAbout = () => {
                         House One
                     </div>
                     <div className="row mb-30">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-10">
                             <img src="/static/img/icons/Group 246.png" alt="hmsp" width="100%" />
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -36,7 +36,7 @@ const VendorAbout = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-10">
                             <img src="/static/img/icons/Group 248.png" alt="hmsp" width="100%" />
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -47,7 +47,7 @@ const VendorAbout = () => {
                         House Two
                     </div>
                     <div className="row mb-30">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-10">
                             <img src="/static/img/icons/Group 258.png" alt="hmsp" width="100%" />
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -55,7 +55,7 @@ const VendorAbout = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 mb-10">
                             <img src="/static/img/icons/Group 260.png" alt="hmsp" width="100%" />
                         </div>
                         <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">

@@ -25,7 +25,7 @@ const VendorAbout = () => {
                 </div>
                 <div className="ps-section__content">
                     <div className="row">
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-20 pl-20">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-20 pl-20 mb-40">
                             <div className="ps-block--testimonials">
                                 <div className="ps-block__thumbnail">
                                     <img src="/static/img/icons/Mask Group 16.png" alt="hmsp" />
@@ -42,7 +42,7 @@ const VendorAbout = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-20 pl-20">
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 pr-20 pl-20 mb-40">
                             <div className="ps-block--testimonials">
                                 <div className="ps-block__thumbnail">
                                     <img src="/static/img/icons/Mask Group 17.png" alt="hmsp" />
