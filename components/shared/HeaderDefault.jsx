@@ -69,16 +69,16 @@ const HeaderDefault = () => {
                             </div>
                             <div className="social">
                                 <div className="follow">
-                                    <a href={results.instagram} target="_blank" className="header__right__list-icons">
+                                    <a href={results.instagram} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
                                     </a>
-                                    <a href={results.facebook} target="_blank" className="header__right__list-icons">
+                                    <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-twitter" aria-hidden="true"></i>
                                     </a>
-                                    <a href={results.facebook} target="_blank" className="header__right__list-icons">
+                                    <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
-                                    <a href={results.linkedin} target="_blank" className="header__right__list-icons">
+                                    <a href={results.linkedin} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-globe" aria-hidden="true"></i>
                                     </a>
                                 </div>
@@ -124,13 +124,13 @@ const HeaderDefault = () => {
                                 <div className="title">
                                     Follow Us
                                 </div>
-                                <a href={results.instagram} target="_blank" className="header__right__list-icons">
+                                <a href={results.instagram} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                 </a>
-                                <a href={results.facebook} target="_blank" className="header__right__list-icons">
+                                <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </a>
-                                <a href={results.linkedin}  target="_blank" className="header__right__list-icons">
+                                <a href={results.linkedin}  target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </div>
