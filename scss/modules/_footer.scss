@@ -22,13 +22,13 @@
                 border-radius: 40px;
             }
 
-            .mobile {
-                display: none;
-            }
+            
 
 
         }
-
+        .mobile {
+            display: none;
+        }
         @include media('<md') {
             .ps-container {
                 display: flex;
