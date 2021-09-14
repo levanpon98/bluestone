@@ -250,7 +250,9 @@
         display: flex;
         flex-flow: column;
         border-top: 1px solid #e1e1e1;
-
+        .last {
+            font-weight: 600;
+        }
         p {
             margin-bottom: 0;
             line-height: 30px;

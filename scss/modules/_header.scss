@@ -131,7 +131,7 @@
     }
 
     .header__contact {
-        background-color: #f4f5f5;
+        background-color: #fff;
         .ps-container {
             font-size: 22px;
             display: flex;
@@ -174,8 +174,27 @@
             }
         }
 
-        @include media('<sm') {
-            display: none;
+        @include media('<=phone') {
+            .ps-container {
+                padding: 15px 40px;
+                font-size: 15px;
+                
+                .header__right{
+                    
+                    .header__right__list-icons {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 20px;
+                        background-color: #000;
+                        color: #fff;
+                        font-size: 14px;
+                        margin-left: 7px;
+                    }
+                }
+            }
         }
     }
 
