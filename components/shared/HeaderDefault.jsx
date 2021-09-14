@@ -31,6 +31,7 @@ const HeaderDefault = () => {
 
     const handleButtonClick = () => {
         setModalVisible(true)
+        setMenuDrawer(false)
     }
 
     const handleShowMenuDrawer = () => {
@@ -65,21 +66,26 @@ const HeaderDefault = () => {
                     <div className="ps-panel__content">
                         <div>
                             <div className="panel-menu">
-                                <NavigationDefault />
+                                <ul class="menu">
+                                    <li><a><a>Home</a></a></li>
+                                    <li><a><a>Services</a></a></li>
+                                    <li><a><a>About Us</a></a></li>
+                                    <li><button class="ps-btn" onClick={handleButtonClick}>Contact Us</button></li>
+                                </ul>
+
                             </div>
                             <div className="social">
+
                                 <div className="follow">
+                                    <div className="title">Follow Us</div>
                                     <a href={results.instagram} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    </a>
-                                    <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
-                                        <i class="fa fa-twitter" aria-hidden="true"></i>
                                     </a>
                                     <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                                     <a href={results.linkedin} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
-                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div className="contact">
@@ -95,12 +101,6 @@ const HeaderDefault = () => {
                                                 <i class="icon-envelope" aria-hidden="true"></i>
                                             </div>
                                             <p>{results.receive_email}</p>
-                                        </li>
-                                        <li>
-                                            <div className="circle">
-                                                <i class="icon-map-marker" aria-hidden="true"></i>
-                                            </div>
-                                            <p>{results.address}</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -130,7 +130,7 @@ const HeaderDefault = () => {
                                 <a href={results.facebook} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </a>
-                                <a href={results.linkedin}  target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
+                                <a href={results.linkedin} target="_blank" rel="noopener noreferrer" className="header__right__list-icons">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -177,13 +177,9 @@ const HeaderDefault = () => {
                     <h2>Contact Us</h2>
                     <p>Fill out the form and we'll be in touch as soon as possible</p>
                 </div>
-                <div className="form">
-                    <Form layout="vertical" onFinish={onFinish}>
-                        <Recaptcha
-                            sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
-                            ref={reRef}
-                            onResolved={() => console.log('Human detected.')}
-                        />
+                <Form layout="vertical" onFinish={onFinish}>
+                    <div className="form">
+
                         <div className="row">
                             <div className="col-md-6">
                                 <Form.Item
@@ -285,6 +281,15 @@ const HeaderDefault = () => {
                                 </Form.Item>
                             </div>
                         </div>
+                        <div className="row">
+                            <div className="col-md-12">
+                                <Recaptcha
+                                    sitekey='6Lev9jAcAAAAAGeZVQ4hsFLPXe88UNyvDUHLciz2'
+                                    ref={reRef}
+                                    onResolved={() => console.log('Human detected.')}
+                                />
+                            </div>
+                        </div>
                         <div className="row ">
                             <div className="col-md-10 d-flex align-items-center">
                                 <Form.Item name="remember" valuePropName="checked" className="checkbox">
@@ -294,13 +299,18 @@ const HeaderDefault = () => {
                             </div>
                             <div className="col-md-2 d-flex justify-content-end">
 
-                                <button className="ps-btn" type="submit" >
+                                <button className="ps-btn btn-inside" type="submit" >
                                     Submit
                                 </button>
                             </div>
                         </div>
-                    </Form>
-                </div>
+
+
+                    </div>
+                    <button className="ps-btn btn-outside" type="submit" >
+                        Submit
+                    </button>
+                </Form>
             </Modal>
 
             <Modal

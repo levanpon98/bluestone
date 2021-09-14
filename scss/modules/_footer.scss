@@ -215,20 +215,29 @@
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
-                padding: 0;
+                padding: 0 40px;
 
                 .header__left {
                     padding: 10px 0;
                     justify-content: left;
+                    p {
+                        font-size: 1.1em;
+                    }
                 }
 
                 .header__center {
                     padding: 10px 0;
                     justify-content: left;
+                    p {
+                        font-size: 1.1em;
+                    }
                 }
 
                 .header__right {
                     padding: 50px 0;
+                    .follow {
+                        justify-content: center;
+                    }
                 }
             }
         }

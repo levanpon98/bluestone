@@ -40,7 +40,7 @@ export default async (req, res) => {
     });
 
     try {
-        let info = await transporter.sendMail({
+        let info = transporter.sendMail({
             from: `"Info" <${process.env.CUSTOMER_EMAIL}>`, // sender address
             to: "vinko@bluestonebuyersagents.com.au", // list of receivers
             subject: `New Consultation from ${body.email}`, // Subject line

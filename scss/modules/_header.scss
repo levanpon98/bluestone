@@ -231,11 +231,10 @@
         .ps-container{
             justify-content: center;
         }
-      
-
+        
         .header__top > .ps-container {
             img {
-                max-width: 150px !important;
+                max-width: 100px !important;
             }
 
             button.ps-btn {
@@ -702,7 +701,9 @@
                 }
             }
         }
-
+        .btn-outside {
+            display: none;
+        }
         
     }
 
@@ -717,7 +718,7 @@
         }
         .btn-outside {
             margin-top: 15px;
-            display: block;
+            display: block !important;
             width: 100%;
         }
         .ant-modal-body { 
