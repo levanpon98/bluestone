@@ -4,6 +4,7 @@ import { stickyHeader } from '~/utilities/common-helpers';
 import NavigationDefault from './NavigationDefault'
 import { Modal, Button, Form, Input, Select, Checkbox, Drawer } from 'antd';
 import Recaptcha from 'react-google-invisible-recaptcha';
+import { Link } from 'react-scroll';
 const { TextArea } = Input;
 const { Option } = Select;
 
@@ -66,13 +67,30 @@ const HeaderDefault = () => {
                     <div className="ps-panel__content">
                         <div>
                             <div className="panel-menu">
-                                <ul class="menu">
-                                    <li><a><a>Home</a></a></li>
-                                    <li><a><a>Services</a></a></li>
-                                    <li><a><a>About Us</a></a></li>
+                                <ul className="menu">
+                                    <li>
+                                        <Link to="home" spy={true} smooth={true} duration={500} offset={-100}>
+                                            <a >
+                                                Home
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="services" spy={true} smooth={true} duration={500} offset={-100}>
+                                            <a >
+                                                Services
+                                            </a>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
+                                            <a  >
+                                                About Us
+                                            </a>
+                                        </Link>
+                                    </li>
                                     <li><button class="ps-btn" onClick={handleButtonClick}>Contact Us</button></li>
                                 </ul>
-
                             </div>
                             <div className="social">
 
