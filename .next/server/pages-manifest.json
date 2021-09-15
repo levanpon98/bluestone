@@ -5,6 +5,6 @@
   "/": "pages/index.js",
   "/404": "pages/404.js",
   "/api/contact": "pages/api/contact.js",
-  "/api/services": "pages/api/services.js",
-  "/api/aboutus": "pages/api/aboutus.js"
+  "/api/aboutus": "pages/api/aboutus.js",
+  "/api/services": "pages/api/services.js"
 }
