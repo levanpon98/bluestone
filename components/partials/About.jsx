@@ -25,7 +25,7 @@ const VendorAbout = () => {
                 <div className="ps-section__content">
                     <div className="ps-block--aboutus">
                         <div className="ps-block__thumbnail">
-                            <img src="/static/img/users/18-3-1_2048x2048.jpg" alt="" />
+                            <img src="/static/img/users/vinko.png" alt="" />
                         </div>
 
                         <div className="ps-block__content">

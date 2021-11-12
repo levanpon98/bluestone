@@ -1363,6 +1363,7 @@
                 right: calc(50% - 250px);
                 img {
                     border-radius: 20px;
+                    object-fit: cover;
                 }
             }
             .ps-block__content {
