@@ -33,10 +33,10 @@ handler.post(async (req, res) => {
         .setText(message)
         .setHtml(message.replace(/\r\n/g, '<br>'))
         .send();
-        res.status(200).json({ status: "OK" })
+        return res.status(200).json({ status: "OK" })
 
     } catch (error) {
-        res.status(400).json({ status: error })
+        return res.status(400).json({ status: error })
     }
 
 })
