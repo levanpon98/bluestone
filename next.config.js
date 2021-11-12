@@ -7,7 +7,6 @@ const nextSettings = {
         title: 'Bluestone',
         titleDescription: 'Bluestone',
     },
-    // target: "serverless",
 };
 
 module.exports = withPlugins([withImages(), nextSettings]);
