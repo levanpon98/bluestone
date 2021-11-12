@@ -33,7 +33,7 @@ const FooterWidgets = () => {
         setMenuDrawer(!menuDrawer)
     }
     const onFinish = async (values) => {
-        const res = await fetch('/api/mail', {
+        const res = await fetch('/api/mailer', {
             method: 'post',
             body: JSON.stringify(values)
         })

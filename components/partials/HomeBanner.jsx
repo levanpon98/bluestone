@@ -67,7 +67,7 @@ const HomeDefaultBanner = () => {
 
     const onFinish = async (values) => {
         reRef.current.execute();
-        const res = await fetch('/api/mail', {
+        const res = await fetch('/api/mailer', {
             method: 'post',
             body: JSON.stringify(values)
         })
