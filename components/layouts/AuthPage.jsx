@@ -17,6 +17,7 @@ const AuthPage = ({ children, title, boxed = false }) => {
             <Head>
                 <title>{titleView}</title>
             </Head>
+            <HeaderDefault />
             <main>{children}</main>
             <FooterFullwidth />
         </div>

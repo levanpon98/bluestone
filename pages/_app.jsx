@@ -6,18 +6,6 @@ import { wrapper } from '~/store/store'
 import {PersistGate} from 'redux-persist/integration/react';
 
 import '~/scss/style.scss';
-import '~/scss/style.scss';
-import '~/scss/home-default.scss';
-import '~/scss/market-place-1.scss';
-import '~/scss/market-place-2.scss';
-import '~/scss/market-place-3.scss';
-import '~/scss/market-place-4.scss';
-import '~/scss/electronic.scss';
-import '~/scss/furniture.scss';
-import '~/scss/organic.scss';
-import '~/scss/technology.scss';
-import '~/scss/autopart.scss';
-import '~/scss/electronic.scss';
 import '~/scss/custom.scss';
 
 function App({ Component, pageProps }) {

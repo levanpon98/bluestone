@@ -20,24 +20,22 @@ class NavigationDefault extends Component {
         return (
             <ul className="menu">
                 <li>
-                    <Link to="home" spy={true} smooth={true} duration={500} offset={-100}>
-                        <a >
-                            Home
-                        </a>
+                    <Link href="#" to="home" spy={true} smooth={true} duration={500} offset={-100}>
+                        Home
                     </Link>
                 </li>
                 <li>
-                    <Link to="services" spy={true} smooth={true} duration={500} offset={-100}>
-                        <a >
-                            Services
-                        </a>
+                    <Link  href="#" to="services" spy={true} smooth={true} duration={500} offset={-100}>
+
+                        Services
+
                     </Link>
                 </li>
                 <li>
-                    <Link to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
-                        <a  >
-                            About Us
-                        </a>
+                    <Link  href="#" to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
+
+                        About Us
+
                     </Link>
                 </li>
             </ul>

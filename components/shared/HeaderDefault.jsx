@@ -70,23 +70,17 @@ const HeaderDefault = () => {
                                 <ul className="menu">
                                     <li>
                                         <Link to="home" spy={true} smooth={true} duration={500} offset={-100}>
-                                            <a >
-                                                Home
-                                            </a>
+                                            Home
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="services" spy={true} smooth={true} duration={500} offset={-100}>
-                                            <a >
-                                                Services
-                                            </a>
+                                        Services
                                         </Link>
                                     </li>
                                     <li>
                                         <Link to="about-us" spy={true} smooth={true} duration={500} offset={-100}>
-                                            <a  >
-                                                About Us
-                                            </a>
+                                        About Us
                                         </Link>
                                     </li>
                                     <li><button class="ps-btn" onClick={handleButtonClick}>Contact Us</button></li>

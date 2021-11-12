@@ -38,3 +38,6 @@ export async function getServerSideProps(context) {
 
 
 export default BecomeAVendorPage;
+
+
+//http://localhost:3000/api/auth/reset-password?token=aasdfasdfqq3r

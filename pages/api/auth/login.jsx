@@ -9,7 +9,7 @@ handler.use(middleware);
 
 handler.post(async (req, res) => {
     const user = await req.db.collection('user').findOne({email: req.body.email})
-
+    
     if (user && bcrypt.compareSync(req.body.password, user.password)) { 
         const token = jwt.sign(
             {

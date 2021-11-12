@@ -17,7 +17,7 @@ const AdminPage = ({ children, title, boxed = false }) => {
             <Head>
                 <title>{titleView}</title>
             </Head>
-            <HeaderContact />
+            <HeaderDefault />
             {/* <HeaderMobile /> */}
             <main>{children}</main>
             <FooterFullwidth />
