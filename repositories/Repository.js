@@ -1,7 +1,7 @@
 import axios from 'axios';
 var os = require("os");
-const baseDomain = 'http://localhost:3001/api';
-// const baseDomain = 'https://bluestone-demo.netlify.app/api'; // API for products
+// const baseDomain = 'http://localhost:3001/api';
+const baseDomain = 'https://bluestone-demo.netlify.app/api'; // API for products
 
 export const customHeaders = {
     Accept: 'application/json',
