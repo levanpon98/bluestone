@@ -10,7 +10,7 @@ const FooterContact = () => {
     const [modalSuccessVisible, setModalSuccessVisible] = useState(false)
     const reRef = useRef();
     const onFinish = async (values) => {
-        const res = await fetch('/api/mailer', {
+        const res = await fetch('/api/send', {
             method: 'post',
             body: JSON.stringify(values)
         })

@@ -27,7 +27,7 @@ handler.post(async (req, res) => {
         Message: ${body.message}
     `
     try {
-        const result = await mailService
+        const result = mailService
         .setReceiver('vinko@bluestonebuyersagents.com.au')
         .setSubject(`New Consultation from ${body.email}`)
         .setText(message)
@@ -40,5 +40,6 @@ handler.post(async (req, res) => {
     }
 
 })
+
 
 export default handler
