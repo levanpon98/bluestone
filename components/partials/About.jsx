@@ -25,7 +25,7 @@ const VendorAbout = () => {
                 <div className="ps-section__content">
                     <div className="ps-block--aboutus">
                         <div className="ps-block__thumbnail">
-                            <img src="/static/img/users/vinko.png" alt="" />
+                            <img src="/static/img/users/vinko.png" alt="Vinko Juric" />
                         </div>
 
                         <div className="ps-block__content">
@@ -43,7 +43,7 @@ const VendorAbout = () => {
                         </div>
                     </div>
                     <div className="mt-70 mb-70">
-                        <img src="/static/img/icons/Scroll Group 4.png" alt="" width="100%" />
+                        <img src="/static/img/icons/Scroll Group 4.png" alt="House six months" width="100%" />
                     </div>
                     <div className="mt-70 mb-70 title-aboutus" >
                         His love for the property market in SA continued to grow and six months later he purchased a rare 3-bedroom unit near the Flinders Medical University. This renter's dream became Vinko’s first renovation project and is now a modern furnished apartment returning $40k.

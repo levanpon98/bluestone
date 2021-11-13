@@ -1364,6 +1364,7 @@
                 img {
                     border-radius: 20px;
                     object-fit: cover;
+                    max-height: 250px;
                 }
             }
             .ps-block__content {
@@ -1393,9 +1394,9 @@
             font-size: 20px;
         }
 
-        img {
-            max-height: 250px;
-        }
+        // img {
+        //     max-height: 250px;
+        // }
     }
 
     .ps-section__header {
