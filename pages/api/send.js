@@ -1,8 +1,7 @@
-import { message } from 'antd'
 import { notification } from 'antd';
-import { TRUE } from 'node-sass';
 import SendGrid  from '~/lib/mail/sendGrid';
 import nextConnect from 'next-connect';
+import middleware from '~/lib/mongodb';
 
 const modalNotification = (type, message, desc) => {
     notification[type]({
@@ -13,6 +12,7 @@ const modalNotification = (type, message, desc) => {
 };
 
 const handler = nextConnect();
+handler.use(middleware);
 
 handler.post(async (req, res) => {
     const mailService = new SendGrid();
