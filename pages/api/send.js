@@ -26,9 +26,10 @@ handler.post(async (req, res) => {
         Interesting: ${body.interested}\r\n
         Message: ${body.message}
     `
+    
     try {
         const result = mailService
-        .setReceiver('vinko@bluestonebuyersagents.com.au')
+        .setReceiver('levanpon1009@gmail.com')
         .setSubject(`New Consultation from ${body.email}`)
         .setText(message)
         .setHtml(message.replace(/\r\n/g, '<br>'))
