@@ -28,13 +28,13 @@ handler.post(async (req, res) => {
     `
     
     try {
-        const result = mailService
+        const result = await mailService
         .setReceiver('levanpon1009@gmail.com')
         .setSubject(`New Consultation from ${body.email}`)
         .setText(message)
         .setHtml(message.replace(/\r\n/g, '<br>'))
         .send();
-        return res.status(200).json({ status: "OK" })
+        return res.status(200).json({ status: "OK", result: result})
 
     } catch (error) {
         return res.status(400).json({ status: error })
